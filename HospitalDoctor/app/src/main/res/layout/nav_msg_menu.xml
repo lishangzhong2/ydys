@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/navMenuWidth"
+    android:layout_height="match_parent"
+    android:background="@color/navMenuBg">
+
+    <TextView
+        android:id="@+id/bwTv"
+        style="@style/textViewWhite12"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mar30dp"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:drawableLeft="@mipmap/ic_spot"
+        android:drawablePadding="@dimen/drawable_padding_5dp"
+        android:gravity="center_vertical"
+        android:text="@string/hzbw" />
+
+    <View
+        android:id="@+id/bwView"
+        style="@style/view_commonHori"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/bwTv"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/bw_dateLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bwTv"
+        android:layout_marginLeft="@dimen/mar30dp"
+        android:layout_marginStart="@dimen/mar30dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/bw_tv_date"
+            style="@style/textViewWhite12"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:src="@drawable/ic_down" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_changePassword"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:layout_above="@id/iv_logout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/marginCommon"
+        android:src="@mipmap/ic_changepasword" />
+
+    <ImageView
+        android:id="@+id/iv_logout"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:src="@mipmap/ic_logout" />
+
+
+    <TextView
+        android:id="@+id/msg_tv1"
+        style="@style/textViewWhite12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bw_dateLinear"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:drawableLeft="@mipmap/ic_spot"
+        android:drawablePadding="@dimen/drawable_padding_5dp"
+        android:text="@string/message" />
+
+    <View
+        android:id="@+id/msg_v1"
+        style="@style/view_commonHori"
+        android:layout_below="@+id/bw_dateLinear"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/msg_tv1"
+        android:background="@android:color/white" />
+
+    <RadioGroup
+        android:id="@+id/message_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_tv1"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/menu_rb_unread"
+            style="@style/menuRadio"
+            android:text="@string/unreadMsg" />
+
+        <RadioButton
+            android:id="@+id/menu_rb_readed"
+            style="@style/menuRadio"
+            android:text="@string/readMSg" />
+
+        <RadioButton
+            android:id="@+id/menu_rb_msg"
+            style="@style/menuRadio"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="invisible" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/attendTv"
+        style="@style/textViewWhite12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_rg"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:drawableLeft="@mipmap/ic_spot"
+        android:drawablePadding="@dimen/drawable_padding_5dp"
+        android:text="@string/attendance" />
+
+    <View
+        android:id="@+id/attendv2"
+        style="@style/view_commonHori"
+        android:layout_below="@id/message_rg"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/attendTv"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/menu_cb_sign"
+        style="@style/menuRadio"
+        android:layout_below="@id/attendTv"
+        android:text="@string/signin" />
+
+    <TextView
+        android:id="@+id/ZhibiaoTv"
+        style="@style/textViewWhite12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_cb_sign"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:drawableLeft="@mipmap/ic_spot"
+        android:drawablePadding="@dimen/drawable_padding_5dp"
+        android:text="绩效指标"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/zhiBiao2"
+        style="@style/view_commonHori"
+        android:layout_below="@id/menu_cb_sign"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/ZhibiaoTv"
+        android:background="@android:color/white"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/menu_cb_zhibiao"
+        style="@style/menuRadio"
+        android:layout_below="@id/ZhibiaoTv"
+        android:text="个人指标"
+        android:visibility="invisible"/>
+</RelativeLayout>

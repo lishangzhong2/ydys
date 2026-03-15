@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="440dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/mar20dp"
+    android:paddingRight="@dimen/mar20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar20dp"
+        android:text="@string/updateTitle"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:text="@string/newFunctionsAre"
+        android:textColor="@color/textBlack"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_updateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/drawable_padding_3dp"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/tv_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:textColor="@color/textBlack"
+        android:textSize="8sp"
+        tools:ignore="SmallSp" />
+
+    <ProgressBar
+        android:id="@+id/newProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mar20dp"
+        android:layout_marginTop="@dimen/mar20dp"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/newTvUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/mar30dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:layout_marginStart="@dimen/mar30dp"
+            android:text="@string/updateApk"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

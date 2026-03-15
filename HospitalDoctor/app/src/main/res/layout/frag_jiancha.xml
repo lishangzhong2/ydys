@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_bg"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/mar10dp"
+    android:layout_marginEnd="@dimen/mar10dp"
+    >
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/jianyan_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/baogao_tv_title"
+            style="@style/textViewBlack13Real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp" />
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp" />
+
+        <include
+            android:id="@+id/header_jianyan"
+            layout="@layout/header_jianyan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/header_xijun"
+            layout="@layout/header_xijun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:visibility="gone" />
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/baogao_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/baogao_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv_yingxiang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/jiancha_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_imagetop"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/jiancha_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:visibility="gone" />
+
+                <WebView
+                    android:id="@+id/jiancha_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/jiacha_listview"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/mar10dp"
+                android:layout_marginRight="@dimen/mar10dp"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:divider="@null"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_zbzcck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll_imagetop"
+                android:paddingLeft="@dimen/mar10dp"
+                android:paddingTop="@dimen/mar10dp"
+
+                android:text="暂不支持pacs影像查看"
+                android:textColor="@color/grey999"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/jiancha_checkbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="查看影像"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/jiancha_resultTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_zbzcck"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="17dp"
+                android:paddingLeft="@dimen/mar10dp"
+                android:text="检查所见："
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_pacs_last"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/mar10dp"
+                android:src="@mipmap/pacs_last"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_pacs_next"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/pacs_next"
+                android:visibility="gone"
+
+                />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

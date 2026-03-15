@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_card_item"
+    android:layout_width="174dp"
+    android:layout_height="57dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/main_card_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_maincard_selector"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cwh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:background="@drawable/bg_card_bed"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/size0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding7dp">
+
+            <TextView
+                android:id="@+id/tv_hzxm"
+                style="@style/cardTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/drawable_padding_5dp"
+                android:layout_marginTop="@dimen/padding7dp"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/iv_gender"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/drawable_padding_5dp"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:layout_toRightOf="@id/tv_hzxm"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_yllx"
+                style="@style/cardTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/drawable_padding_5dp"
+                android:layout_marginTop="@dimen/padding7dp"
+                android:layout_toRightOf="@id/iv_gender"
+                android:gravity="center"
+                android:textColor="@color/grey666" />
+
+            <TextView
+                android:id="@+id/tv_ryzd"
+                style="@style/cardTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_hzxm"
+                android:gravity="center"
+                android:textColor="@color/grey666" />
+
+            <ImageView
+                android:id="@+id/iv_hljb"
+                android:layout_width="14dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

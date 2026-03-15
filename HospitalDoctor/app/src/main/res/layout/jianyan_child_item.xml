@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/menu_item_bg"
+    android:layout_height="50dp">
+    <!--@dimen/mar30dp-->
+    <CheckBox
+        android:id="@+id/childBox"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:button="@null"
+        android:drawableLeft="@mipmap/icon_wenshu"
+        android:drawablePadding="@dimen/drawable_padding_5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+    <TextView
+        android:layout_below="@+id/childBox"
+        android:id="@+id/child_sj"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/menu_item_bg"
+        android:paddingRight="3dp"
+        android:gravity="right"
+        android:text="2019/6/22 0:00:01"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/taoyizhuLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemHeight"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <View style="@style/view_commonVert" />
+
+    <CheckBox
+        android:id="@+id/item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_zbz"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_yzmc"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="15" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_gg"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_jl"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_dw"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_yf"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_pl"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:textColor="@color/colorItemText" />
+
+    <View style="@style/view_commonVert" />
+
+</LinearLayout>

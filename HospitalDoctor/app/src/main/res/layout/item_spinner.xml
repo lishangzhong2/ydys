@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/testtext"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_item_yf"
+        android:padding="@dimen/drawable_padding_5dp"
+        android:text="hahhah"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp"
+        android:layout_marginLeft="@dimen/padding7dp"
+        android:layout_marginRight="@dimen/padding7dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        />
+</RelativeLayout>

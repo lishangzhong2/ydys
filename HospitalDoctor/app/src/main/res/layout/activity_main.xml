@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commonBg"
+    tools:context="com.tphy.hospitaldoctor.ui.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/texttemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="hahah"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <include
+        android:id="@+id/nav_card"
+        layout="@layout/nav_card"
+        android:layout_width="208dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="@dimen/mar10dp" />
+
+    <include
+        android:id="@+id/vertical_navi_view"
+        layout="@layout/vertical_navation_layout"
+        android:layout_width="@dimen/navWidth"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/nav_card" />
+
+    <include
+        android:id="@+id/nav_home_menu"
+        layout="@layout/nav_home_menu"
+        android:layout_width="156dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_card"
+        android:layout_toEndOf="@id/vertical_navi_view"
+        android:layout_toRightOf="@id/vertical_navi_view" />
+
+    <include
+        android:id="@+id/nav_yizhu_menu"
+        layout="@layout/nav_yizhu_menu"
+        android:layout_width="156dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_card"
+        android:layout_toEndOf="@id/vertical_navi_view"
+        android:layout_toRightOf="@id/vertical_navi_view"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/nav_wenshu_menu"
+        layout="@layout/nav_wenshu_menu"
+        android:layout_width="156dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_card"
+        android:layout_toEndOf="@id/vertical_navi_view"
+        android:layout_toRightOf="@id/vertical_navi_view"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/nav_baogao_menu"
+        layout="@layout/nav_baogao_menu"
+        android:layout_width="156dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_card"
+        android:layout_toEndOf="@id/vertical_navi_view"
+        android:layout_toRightOf="@id/vertical_navi_view"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/nav_beiwang_menu"
+        layout="@layout/nav_beiwang_menu"
+        android:layout_width="156dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_card"
+        android:layout_toEndOf="@id/vertical_navi_view"
+        android:layout_toRightOf="@id/vertical_navi_view"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/nav_lj_menu"
+        layout="@layout/nav_lj_menu"
+        android:layout_width="156dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_card"
+        android:layout_toEndOf="@id/vertical_navi_view"
+        android:layout_toRightOf="@id/vertical_navi_view"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/nav_msg_menu"
+        layout="@layout/nav_msg_menu"
+        android:layout_width="156dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_card"
+        android:layout_toEndOf="@id/vertical_navi_view"
+        android:layout_toRightOf="@id/vertical_navi_view"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/frag_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="218dp"
+        android:layout_marginStart="218dp"
+        android:layout_marginTop="@dimen/mar10dp" />
+
+    <ImageView
+        android:id="@+id/main_beiwang"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="54dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:src="@mipmap/ic_beiwang"
+        android:visibility="gone" />
+
+    <!--<include-->
+        <!--android:id="@+id/new_msg"-->
+        <!--layout="@layout/new_msg_layout"-->
+        <!--android:layout_width="168dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="@dimen/drawable_padding_3dp"-->
+        <!--android:layout_marginEnd="@dimen/drawable_padding_5dp"-->
+        <!--android:layout_marginRight="@dimen/drawable_padding_5dp"-->
+        <!--android:visibility="gone" />-->
+
+    <include
+        android:id="@+id/navlist"
+        layout="@layout/navlist_layout"
+        android:layout_width="188dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="114dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/menu_tools"
+        layout="@layout/menu_tools"
+        android:layout_width="188dp"
+        android:layout_height="188dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-94dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_callTools"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-20dp"
+        android:src="@mipmap/ic_calltool" />
+</RelativeLayout>

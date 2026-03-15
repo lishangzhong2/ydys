@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="460dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:background="@drawable/bg_stroke">
+
+    <TextView
+        android:id="@+id/bw_tv0"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginStart="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/mar12dp"
+        android:gravity="center_vertical"
+        android:text="@string/topicIs"
+        android:textColor="#999"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <EditText
+        android:id="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toEndOf="@id/bw_tv0"
+        android:layout_toRightOf="@id/bw_tv0"
+        android:lines="1"
+        android:textSize="@dimen/textSize_12sp"
+        android:background="@android:color/white"
+        />
+
+    <View
+        android:id="@+id/bw_view0"
+        style="@style/view_commonHoriGrey"
+        android:layout_below="@id/bw_tv0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bw_view0"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginStart="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:text="@string/contentIs"
+        android:textColor="#999"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <ImageView
+        android:id="@+id/bw_iv_addPhoto"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/bw_view0"
+        android:layout_marginEnd="@dimen/mar12dp"
+        android:layout_marginRight="@dimen/mar12dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@mipmap/ic_add_photo" />
+
+    <EditText
+        android:id="@+id/note_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/bw_iv_addPhoto"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginStart="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:textSize="@dimen/textSize_12sp"
+        android:gravity="start"
+        android:background="@android:color/white"
+        />
+
+    <ImageView
+        android:id="@+id/note_iv_phote"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/note_content"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginStart="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/drawable_padding_5dp" />
+
+    <ImageView
+        android:id="@+id/bw_iv_save"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:src="@mipmap/ic_save" />
+</RelativeLayout>

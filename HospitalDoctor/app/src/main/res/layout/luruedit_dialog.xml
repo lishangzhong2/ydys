@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="700dp"
+    android:layout_height="475dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/Left"
+        android:layout_width="317dp"
+        android:layout_height="475dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医嘱名称："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/luru_tv_yznr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开嘱时间："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/luru_tv_yzsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="规格："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/luru_tv_gg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="库存："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/luru_tv_kc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:id="@+id/usageRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用法："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/luru_sp_yf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:layout_marginRight="38dp"
+                android:text="点击选择用法"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:id="@+id/desageRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剂量："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/jl_iv_decrease"
+                android:layout_width="@dimen/mar10dp"
+                android:layout_height="@dimen/mar10dp"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:src="@mipmap/ic_luru_decrease"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/luru_sp_jl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:text="0"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/luru_tv_jldw"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey999"
+                android:textSize="15dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/jl_iv_add"
+                android:layout_width="@dimen/mar10dp"
+                android:layout_height="@dimen/mar10dp"
+                android:layout_marginLeft="@dimen/drawable_padding_3dp"
+                android:src="@mipmap/ic_luru_add"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/frequencyRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="频率："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <!--<Spinner-->
+            <!--android:id="@+id/luru_sp_pl"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="@dimen/mar20dp"-->
+            <!--android:layout_marginLeft="@dimen/marginCommon"-->
+            <!--android:layout_marginRight="38dp"-->
+            <!--android:textColor="@color/textBlack"-->
+            <!--android:textSize="@dimen/textSize_13sp" />-->
+            <TextView
+                android:id="@+id/luru_sp_pl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:layout_marginRight="38dp"
+                android:text="点击选择频率"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数量："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/sl_iv_decrease"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:src="@mipmap/ic_luru_decrease" />
+
+            <EditText
+                android:id="@+id/luru_et_sl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/drawable_padding_5dp"
+                android:inputType="number"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/sl_iv_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/drawable_padding_5dp"
+                android:src="@mipmap/ic_luru_add" />
+
+            <TextView
+                android:id="@+id/luru_tv_sldw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/drawable_padding_3dp"
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="种类："
+                android:textColor="@color/grey999"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/luru_rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_luru_type"
+                android:drawablePadding="@dimen/drawable_padding_5dp"
+                android:text="自备药"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/luru_rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar30dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_luru_type"
+                android:drawablePadding="@dimen/drawable_padding_5dp"
+                android:text="皮试"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注："
+                android:textColor="@color/grey999"
+                android:textSize="15dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/dosage_clear"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/ic_clear_blue"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/luru_et_bz"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:layout_marginRight="38dp"
+                android:textColor="@color/textBlack"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/edit_iv_save"
+            android:layout_width="53dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:src="@mipmap/ic_save" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Right1"
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="@dimen/mar30dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/desage_searchArea"
+                android:layout_width="match_parent"
+                android:layout_height="475dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_weight="1"
+                    android:text="常用剂量"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/desage_search"
+                        android:layout_width="280dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/desage_clear"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_clear_blue"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/jl_button"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="确定" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/desageList"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_below="@+id/luru_searchArea"
+                    android:layout_marginLeft="@dimen/padding7dp"
+                    android:layout_marginRight="@dimen/padding7dp"
+                    android:layout_marginTop="@dimen/drawable_padding_5dp"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="@dimen/drawable_padding_5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/drawable_padding_5dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/desage_iv_empty"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_empty"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Right2"
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="@dimen/mar30dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/usage_searchArea"
+                android:layout_width="match_parent"
+                android:layout_height="475dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_weight="1"
+                    android:text="常用用法"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/usage_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/usage_clear"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_clear_blue"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/usageList"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_below="@+id/luru_searchArea"
+                    android:layout_marginLeft="@dimen/padding7dp"
+                    android:layout_marginRight="@dimen/padding7dp"
+                    android:layout_marginTop="@dimen/drawable_padding_5dp"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="@dimen/drawable_padding_5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/drawable_padding_5dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/usage_iv_empty"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_empty"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Right3"
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="@dimen/mar30dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/frequency_searchArea"
+                android:layout_width="match_parent"
+                android:layout_height="475dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_weight="1"
+                    android:text="常用频率"
+                    android:textSize="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/frequency_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/frequency_clear"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_clear_blue"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/frequencyUseList"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_below="@+id/luru_searchArea"
+                    android:layout_marginLeft="@dimen/padding7dp"
+                    android:layout_marginRight="@dimen/padding7dp"
+                    android:layout_marginTop="@dimen/drawable_padding_5dp"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="@dimen/drawable_padding_5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/drawable_padding_5dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/frequency_iv_empty"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_empty"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemHeight"
+    android:orientation="vertical">
+    <CheckBox
+        android:id="@+id/jiancha_title"
+        style="@style/textViewWhite11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:button="@null"
+        android:background="#00ffffff"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingLeft="@dimen/mar30dp" />
+        <LinearLayout
+            android:id="@+id/ll_jianitem"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/jiancha_title1"
+                style="@style/textViewWhite11"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingLeft="@dimen/mar30dp" />
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_type"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="检查类型"-->
+            <!--/>-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_project"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="项目名称"-->
+            <!--/>-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_part"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="检查部位"-->
+            <!--/>-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_state"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="状态"-->
+            <!--/>-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_applyman"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="申请人"-->
+            <!--/>-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_applyDep"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="申请科室"-->
+            <!--/>-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_applyDate"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="申请日期"-->
+            <!--/>-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/item_tv_reporter"-->
+            <!--style="@style/itemTextStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="报告人" />-->
+
+            <!--<View style="@style/view_commonVert" />-->
+
+        <!-- android:background="@drawable/menu_item_bg"-->
+            <TextView
+                android:id="@+id/item_tv_reportDate"
+                style="@style/itemTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="right"
+                android:textColor="@color/commonBg"
+                android:text=""
+            />
+        </LinearLayout>
+    <!--<View style="@style/view_commonVert" />-->
+</RelativeLayout>

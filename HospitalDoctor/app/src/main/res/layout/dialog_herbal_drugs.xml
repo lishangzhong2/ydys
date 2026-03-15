@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="700dp"
+    android:layout_height="480dp"
+    android:background="@drawable/card_bg"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/herbal_rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/herbal_radio_quanyuan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_selector"
+                android:drawablePadding="@dimen/drawable_padding_5dp"
+                android:text="全院"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textSize_12sp" />
+
+            <RadioButton
+                android:id="@+id/herbal_radio_keshi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_selector"
+                android:drawablePadding="@dimen/drawable_padding_5dp"
+                android:text="科室"
+                android:checked="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textSize_12sp" />
+
+            <RadioButton
+                android:id="@+id/herbal_radio_geren"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_selector"
+                android:drawablePadding="@dimen/drawable_padding_5dp"
+                android:text="个人"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textSize_12sp" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/herbal_divider"
+            style="@style/view_commonHoriGrey"
+            android:layout_below="@id/herbal_rg" />
+
+        <ListView
+            android:id="@+id/herbal_cfList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/herbal_divider"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/herbal_iv_empty"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_empty" />
+    </RelativeLayout>
+
+    <View style="@style/view_commonVert" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <CheckBox
+            android:id="@+id/herbal_cb_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/mar10dp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/herbal_cb_all"
+            android:layout_alignBottom="@+id/herbal_cb_all"
+            android:layout_toEndOf="@+id/herbal_cb_all"
+            android:layout_toRightOf="@+id/herbal_cb_all"
+            android:text="全选"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="常用处方"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_13sp"
+            android:id="@+id/textView4" />
+
+        <View
+            android:id="@+id/herbalView"
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:layout_marginRight="@dimen/marginCommon"
+            android:layout_marginTop="@dimen/mar40dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/herbal_drugRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/herbalView"
+            android:layout_marginBottom="@dimen/mar50dp"
+            android:paddingLeft="@dimen/mar10dp"
+            android:paddingRight="@dimen/mar10dp" />
+
+        <ImageView
+            android:id="@+id/herbal_iv_dismiss"
+            android:layout_width="54dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/mar20dp"
+            android:src="@mipmap/ic_dismiss"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/herbal_tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="60dp"
+            android:layout_toRightOf="@+id/herbal_iv_dismiss"
+            android:text="取药药房："
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <Spinner
+            android:id="@+id/herbal_sp_commonRoom"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_toRightOf="@+id/herbal_tv_room" />
+
+        <ImageView
+            android:id="@+id/herbal_iv_luru"
+            android:layout_width="54dp"
+            android:layout_height="24dp"
+            android:layout_alignEnd="@+id/herbalView"
+            android:layout_alignRight="@+id/herbalView"
+            android:layout_alignTop="@+id/herbal_sp_commonRoom"
+            android:src="@mipmap/ic_luru"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</LinearLayout>

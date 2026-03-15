@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemHeight"
+    android:background="@drawable/multi_checked_bg">
+
+    <LinearLayout
+        android:id="@+id/item_yizhu_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/item_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_state"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_startTime"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_group"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_yizhu"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="150" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_docSig"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_nursig"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_endTime"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:textColor="@color/colorItemText" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_endDoc"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_nurCheck"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
+
+        <View style="@style/view_commonVert" />
+
+        <TextView
+            android:id="@+id/item_tv_num"
+            style="@style/itemTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40" />
+
+        <View style="@style/view_commonVert" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="@dimen/itemHeight"
+        android:layout_height="@dimen/itemHeight"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textSize="@dimen/textSize_12sp"
+        android:visibility="gone"
+        />
+</RelativeLayout>

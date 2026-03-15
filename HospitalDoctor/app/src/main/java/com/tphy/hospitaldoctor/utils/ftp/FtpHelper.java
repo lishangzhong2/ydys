@@ -1,0 +1,408 @@
+package com.tphy.hospitaldoctor.utils.ftp;
+
+import android.util.Log;
+
+import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPClientConfig;
+import org.apache.commons.net.ftp.FTPFile;
+import org.apache.commons.net.ftp.FTPReply;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * Created by ZhangHao on 2017/5/19.
+ * 封装Ftp操作
+ */
+
+public class FtpHelper {
+    /**
+     * 服务器地址
+     */
+    private String hostName;
+
+    /**
+     * 用户名.
+     */
+    private String userName;
+
+    /**
+     * 密码.
+     */
+    private String password;
+
+    /**
+     * FTP连接.
+     */
+    private FTPClient ftpClient;
+
+    /**
+     * FTP根目录.
+     */
+    public static final String REMOTE_PATH = "192.168.0.135";
+
+    /**
+     * FTP当前目录.
+     */
+    private String currentPath = "";
+
+    private String folderName;
+    private String fileName;
+
+    /**
+     * 构造函数.
+     *
+     * @param host hostName 服务器名
+     * @param user userName 用户名
+     * @param pass password 密码
+     */
+    public FtpHelper(String host, String user, String pass) {
+        this.hostName = host;
+        this.userName = user;
+        this.password = pass;
+        this.ftpClient = new FTPClient();
+        //如果不调用这个方法设置端口，则是使用默认端口21
+        this.ftpClient.setDefaultPort(Constant.FTP_PORT);
+    }
+
+    public FtpHelper() {
+        this.hostName = Constant.FTP_PATH;
+        this.userName = Constant.FTP_NAME;
+        this.password = Constant.FTP_PAW;
+        this.ftpClient = new FTPClient();
+        //如果不调用这个方法设置端口，则是使用默认端口21
+        this.ftpClient.setDefaultPort(Constant.FTP_PORT);
+    }
+
+    /**
+     * 打开FTP服务.
+     *
+     * @throws IOException
+     */
+    public void openConnect() throws IOException {
+        // 中文转码
+        ftpClient.setControlEncoding("UTF-8");
+        int reply; // 服务器响应值
+        // 连接至服务器
+        ftpClient.connect(hostName);
+        // 获取响应值
+        reply = ftpClient.getReplyCode();
+        if (!FTPReply.isPositiveCompletion(reply)) {
+            // 断开连接
+            ftpClient.disconnect();
+            throw new IOException("connect fail: " + reply);
+        }
+        // 登录到服务器
+        if (userName != null && !userName.equals("")) {
+            ftpClient.login(userName, password);
+        } else {
+            //无用户名登录时
+            ftpClient.login("anonymous", "123456");
+        }
+        // 获取响应值，判断登陆结果
+        reply = ftpClient.getReplyCode();
+        if (!FTPReply.isPositiveCompletion(reply)) {
+            // 断开连接
+            ftpClient.disconnect();
+            throw new IOException("connect fail: " + reply);
+        } else {
+            // 获取登录信息
+            FTPClientConfig config = new FTPClientConfig(ftpClient.getSystemType().split(" ")[0]);
+            config.setServerLanguageCode("zh");
+            ftpClient.configure(config);
+            // 使用被动模式设为默认
+//            ftpClient.enterLocalPassiveMode();
+//            ftpClient.enterLocalActiveMode();
+//            ftpClient.enterRemotePassiveMode();
+//            // 二进制文件支持
+            ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+        }
+    }
+
+    /**
+     * 关闭FTP服务.
+     *
+     * @throws IOException
+     */
+    public void closeConnect() throws IOException {
+        if (ftpClient != null) {
+            // 登出FTP
+            ftpClient.logout();
+            // 断开连接
+            ftpClient.disconnect();
+        }
+    }
+
+    /**
+     * 获取ftp连接状态
+     *
+     * @throws IOException
+     */
+    public boolean isConnect() {
+        return ftpClient.isConnected();
+    }
+
+    /**
+     * 列出FTP指定文件夹下下所有文件.
+     *
+     * @param remotePath ftp文件夹路径
+     * @return FTPFile集合
+     * @throws IOException
+     */
+    public List<FTPFile> listFiles(String remotePath) throws IOException {
+        List<FTPFile> list = new ArrayList<>();
+        // 获取文件
+        ftpClient.changeWorkingDirectory(remotePath);
+        FTPFile[] files = ftpClient.listFiles();
+        // 遍历并且添加到集合
+        Collections.addAll(list, files);
+        return list;
+    }
+
+    /**
+     * 下载整个目录
+     *
+     * @param remotePath FTP目录
+     * @param fileName   需要下载的文件名
+     * @param localPath  本地目录
+     * @return Result
+     * @throws IOException
+     */
+    public boolean downloadFile(String remotePath, String folderName, String fileName, String localPath) throws IOException {
+        boolean result = false;
+        // 初始化FTP当前目录
+        currentPath = remotePath;
+        // 更改FTP目录
+        ftpClient.changeToParentDirectory();
+        // 得到FTP当前目录下所有文件
+        ftpClient.enterLocalPassiveMode();
+        FTPFile[] ftpFiles = ftpClient.listFiles(folderName);
+        //在本地创建对应文件夹目录
+        File localFolder = new File(localPath);
+        if (!localFolder.exists()) {
+            localFolder.mkdirs();
+        }
+//        Log.e("WQ", "王琦==");
+        // 循环遍历,找到匹配的文件
+        for (FTPFile ftpFile : ftpFiles) {
+            if (ftpFile.getName().equals(fileName)) {
+                // 下载单个文件
+                Log.e("WQ", ftpFile.getName());
+//                flag = downloadSingle(new File(localPath + "/" + ftpFile.getName()), ftpFile);
+                result = downloadSingle(new File(localPath + "/" + ftpFile.getName()), ftpFile);
+                Log.e("wcx", "" + ftpFile.getName());
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 下载整个目录
+     *
+     * @param remotePath FTP目录
+     * @param localPath  本地目录
+     * @return Result 成功下载的文件数量
+     * @throws IOException
+     */
+    public boolean downloadFolder(String remotePath, String localPath, String folderName, String fileName) throws IOException {
+        //下载的数量
+//        int fileCount = 0;
+        // 初始化FTP当前目录
+        boolean flag = false;
+        currentPath = remotePath;
+        // 更改FTP目录
+        this.folderName = folderName;
+        this.fileName = fileName;
+//        Log.e("WQ", "foldername==" + folderName);
+//        String sprintsss = ftpClient.printWorkingDirectory();
+//        Log.e("downloadFolder: ", sprintsss);
+        ftpClient.changeToParentDirectory();
+        // 得到FTP当前目录下所有文件
+        //FTPFile[] ftpFiles = ftpClient.listFiles();
+        ftpClient.enterLocalPassiveMode();
+        FTPFile[] ftpFiles = ftpClient.listFiles(folderName);
+        int length = ftpFiles.length;
+        //在本地创建对应文件夹目录
+        // localPath = localPath + "/" + remotePath.substring(remotePath.lastIndexOf("/"));
+        localPath = localPath + "/" + "Download";
+        File localFolder = new File(localPath);
+        if (!localFolder.exists()) {
+            localFolder.mkdirs();
+        }
+        // 循环遍历
+        int i = 0;
+        for (FTPFile ftpFile : ftpFiles) {
+//            Log.e("WCXftp的文件列表", "downloadFolder: ===" + ftpFile.getName());
+            if (ftpFile.getName().equals(fileName)) {
+
+                flag = downloadSingle(new File(localPath + "/" + ftpFile.getName() + ".dcm"), ftpFile);
+
+                //也就是没有匹配的文件
+//                Log.e("WQ","文件名："+ftpFile.getName());
+            }
+            i++;
+            if (i == 1) {
+//                Log.e("wcx进入列表开始检索", "downloadFolder: " + Calendar.getInstance());
+            }
+        }
+//        Log.e("wcx检索完毕", "downloadFolder: " + Calendar.getInstance());
+        return flag;
+    }
+
+    /**
+     * 下载单个文件
+     *
+     * @param localFile 本地目录
+     * @param ftpFile   FTP文件
+     * @return true下载成功, false下载失败
+     * @throws IOException
+     */
+    public boolean downloadSingle(File localFile, FTPFile ftpFile) throws IOException {
+        boolean flag;
+        // 创建输出流
+        OutputStream outputStream = new FileOutputStream(localFile);
+        // 下载单个文件
+        String name2 = ftpFile.getName();
+        flag = ftpClient.retrieveFile("/" + folderName + "/" + ftpFile.getName(), outputStream);
+        // 关闭文件流
+        outputStream.close();
+        return flag;
+    }
+
+
+    /**
+     * 下载单个文件
+     *
+     * @return true下载成功, false下载失败
+     * @throws IOException
+     */
+    public boolean downloadSingleBypath(String lpath, String ftpfilepath) throws IOException {
+        FTPFile ff = ftpClient.mlistFile(ftpfilepath);
+        boolean flag;
+        // 创建输出流
+
+        //  File fil  = new File("lpath"+"");
+        File fil = new File(lpath + "/321.dcm");
+        fil.createNewFile();
+        // if (fil.exists()) fil.delete();
+        OutputStream outputStream = new FileOutputStream(fil);
+        // 下载单个文件
+        flag = ftpClient.retrieveFile(ff.getName(), outputStream);
+        // 关闭文件流
+        outputStream.close();
+        return flag;
+    }
+
+    /**
+     * 上传.
+     *
+     * @param localFilePath 需要上传的本地文件路径
+     * @param remotePath    FTP目录
+     * @return 上传结果
+     * @throws IOException
+     */
+    public boolean uploadFile(String localFilePath, String remotePath) throws IOException {
+        boolean flag = false;
+        // 初始化FTP当前目录
+        currentPath = remotePath;
+        // 二进制文件支持
+        ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+        // 设置模式
+        ftpClient.setFileTransferMode(FTPClient.STREAM_TRANSFER_MODE);
+        // 改变FTP目录
+        ftpClient.changeWorkingDirectory(currentPath);
+        File localFile = new File(localFilePath);
+        if (localFile.exists() && localFile.isFile()) {
+            flag = uploadingSingle(localFile);
+        }
+        // 返回值
+        return flag;
+    }
+
+    /**
+     * 上传.
+     *
+     * @param localFolderPath 需要上传的本地文件夹路径
+     * @param remotePath      FTP目录
+     * @return 上传结果
+     * @throws IOException
+     */
+    public int uploadFolder(String localFolderPath, String remotePath) throws IOException {
+        //
+        int count = 0;
+        boolean flag = false;
+        // 初始化FTP当前目录
+        currentPath = remotePath;
+        // 二进制文件支持
+        ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+        // 设置模式
+        ftpClient.setFileTransferMode(FTPClient.STREAM_TRANSFER_MODE);
+        // 改变FTP目录
+        ftpClient.changeWorkingDirectory(currentPath);
+        File localFolder = new File(localFolderPath);
+        if (localFolder.exists() && localFolder.isDirectory()) {
+            //先在ftp上创建对应的文件夹
+            String ftpFolder = remotePath + "/" + localFolder.getName();
+            createFolder(ftpFolder);
+            // 改变FTP目录
+            ftpClient.changeWorkingDirectory(ftpFolder);
+            //遍历文件夹
+            File[] files = localFolder.listFiles();
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    //如果是文件夹
+                    int result = uploadFolder(file.getAbsolutePath(), ftpFolder + "/" + file.getName());
+                    count += result;
+                } else if (file.isFile()) {
+                    flag = uploadingSingle(file);
+                    if (flag) {
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
+    /**
+     * 上传单个文件.
+     *
+     * @param localFile 本地文件
+     * @return true上传成功, false上传失败
+     * @throws IOException
+     */
+    private boolean uploadingSingle(File localFile) throws IOException {
+        boolean flag;
+        // 创建输入流
+        InputStream inputStream = new FileInputStream(localFile);
+        // 上传单个文件
+        flag = ftpClient.storeFile(localFile.getName(), inputStream);
+        // 关闭文件流
+        inputStream.close();
+        return flag;
+    }
+
+    /**
+     * 创建文件夹
+     *
+     * @param path 文件夹名
+     * @return
+     */
+
+    public boolean createFolder(String path) {
+        boolean result = false;
+        try {
+            result = ftpClient.makeDirectory(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+}

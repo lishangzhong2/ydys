@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/alert_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="备忘详情"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/alert_tv_content"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:lineSpacingExtra="8dp"
+        android:padding="@dimen/margin"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp"
+
+        />
+
+    <TextView
+        android:id="@+id/alert_tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/alert_confirm_bg"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+</LinearLayout>

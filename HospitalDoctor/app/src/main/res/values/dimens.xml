@@ -1,0 +1,42 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="drawable_padding_2dp">2dp</dimen>
+    <dimen name="drawable_padding_3dp">3dp</dimen>
+    <dimen name="drawable_padding_5dp">5dp</dimen>
+    <dimen name="mar10dp">10dp</dimen>
+    <dimen name="mar20dp">20dp</dimen>
+    <dimen name="marginCommon">30dp</dimen>
+    <dimen name="mar12dp">12dp</dimen>
+    <dimen name="textSize_13sp">13sp</dimen>
+    <dimen name="textSize_12sp">12sp</dimen>
+    <dimen name="textSize_10sp">10sp</dimen>
+    <dimen name="tableHeadHeight">25dp</dimen>
+    <dimen name="margin">26dp</dimen>
+    <dimen name="viewWidth">0.1dp</dimen>
+    <dimen name="navIconSpace">8dp</dimen>
+    <dimen name="navWidth">52dp</dimen>
+    <dimen name="navIconHeight">47dp</dimen>
+    <dimen name="navItemPadding">5dp</dimen>
+    <dimen name="navMenuWidth">156dp</dimen>
+    <dimen name="cardMarginParent">10dp</dimen>
+    <dimen name="cardVerticalSpace">5dp</dimen>
+    <dimen name="itemHeight">40dp</dimen>
+    <dimen name="size0dp">0dp</dimen>
+    <dimen name="mar30dp">30dp</dimen>
+    <dimen name="mar40dp">40dp</dimen>
+    <dimen name="mar50dp">50dp</dimen>
+    <dimen name="padding7dp">7dp</dimen>
+    <dimen name="containerHeight">46dp</dimen>
+
+
+    <!--折线图的-->
+    <dimen name="default_strokeSize">2dp</dimen>
+    <dimen name="default_indicatorSize">6dp</dimen>
+    <dimen name="default_indicatorStrokeSize">1dp</dimen>
+    <dimen name="default_barMargin">2dp</dimen>
+    <dimen name="default_labelSize">10sp</dimen>
+    <dimen name="mar10">10dp</dimen>
+
+    <dimen name="btn_text_size">16sp</dimen>
+    <dimen name="view_text_size">16sp</dimen>
+</resources>

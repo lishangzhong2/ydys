@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_linear"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:layout_marginTop="10dp"
+        android:id="@+id/cb_checked"
+        android:layout_marginLeft="7dp"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        />
+    <TextView
+        android:layout_toRightOf="@id/cb_checked"
+        android:layout_marginRight="60dp"
+        android:id="@+id/nusingadapter_xmmc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="sdfsdfsdfsdfsdfsdfsdfasdfasdfasdfsadfasdfsdfasdfasdsdfsadfasdfasdff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvsl"
+        android:layout_width="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="3dp"
+        android:textColor="@color/grey999"
+        android:text="04-09 00:00"
+        android:textSize="14sp" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_below="@id/nusingadapter_xmmc"
+        android:layout_toRightOf="@id/tvsl"
+        android:id="@+id/nusingadapter_sl"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="3dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text=""
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvbx"
+        android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/cb_bx"
+        android:layout_alignBottom="@+id/cb_bx"
+        android:layout_toLeftOf="@+id/cb_bx"
+        android:layout_toStartOf="@+id/cb_bx"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="报销:"
+        android:textColor="@color/grey999"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:layout_below="@id/nusingadapter_xmmc"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:id="@+id/cb_bx"
+        android:layout_marginLeft="7dp"
+        android:layout_width="30dp"
+        android:layout_height="25dp" />
+</RelativeLayout>

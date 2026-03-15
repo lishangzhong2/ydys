@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="156dp"--><!--android:layout_height="match_parent"--><!--android:orientation="vertical">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/navMenuWidth"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="#1669b2"
+        android:visibility="gone">
+        <!--android:background="@drawable/card_bg"-->
+        <EditText
+            android:id="@+id/menu_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/drawable_padding_5dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:layout_marginBottom="@dimen/drawable_padding_5dp"
+            android:background="@drawable/edit_round_bg"
+            android:hint="@string/inputNameOrNum"
+
+            android:paddingStart="@dimen/drawable_padding_3dp"
+            android:paddingLeft="@dimen/drawable_padding_3dp"
+            android:textColor="#999"
+            android:textSize="11sp"
+            tools:ignore="RtlSymmetry,SmallSp" />
+    </LinearLayout>
+<!--    android:imeOptions="actionDone"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/navMenuBg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/menu_tv_notmy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="21dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize_10sp" />
+
+        <TextView
+            android:id="@+id/tv_ismy"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginCommon"
+            android:layout_marginRight="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/mar20dp"
+            android:layout_toLeftOf="@id/menu_cb_my"
+            android:text="@string/isMyPatient" />
+
+
+        <CheckBox
+            android:id="@+id/menu_cb_my"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/switch_bg"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/tv_quanke"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginCommon"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/mar20dp"
+            android:layout_toRightOf="@id/menu_cb_my"
+            android:text="我的" />
+
+        <TextView
+            android:id="@+id/menu_tv_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:layout_marginTop="21dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize_10sp" />
+
+        <TextView
+            android:id="@+id/menu_tv_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_ismy"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/drawable_padding_2dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize_10sp" />
+
+        <TextView
+            android:id="@+id/tv_isIn"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ismy"
+            android:layout_marginBottom="@dimen/mar20dp"
+            android:layout_marginRight="@dimen/drawable_padding_5dp"
+            android:layout_toLeftOf="@id/menu_cb_in"
+            android:text="出院" />
+
+        <CheckBox
+            android:id="@+id/menu_cb_in"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_ismy"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/switch_bg"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/tv_chuyuan"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ismy"
+            android:layout_marginBottom="@dimen/marginCommon"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_toRightOf="@id/menu_cb_in"
+            android:text="在院" />
+
+        <TextView
+            android:id="@+id/menu_tv_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_ismy"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/drawable_padding_2dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize_10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_hljb"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_isIn"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:drawableLeft="@mipmap/ic_spot"
+            android:drawablePadding="@dimen/drawable_padding_5dp"
+            android:text="@string/hljb" />
+
+        <View
+            android:id="@+id/jibieV"
+            style="@style/view_commonHori"
+            android:layout_below="@id/tv_isIn"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/tv_hljb"
+            android:background="@android:color/white" />
+
+        <RadioGroup
+            android:id="@+id/menu_rg_hljb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_hljb"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_level_all"
+                android:checked="true"
+                android:layout_width="@dimen/mar50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="@dimen/mar20dp"
+                android:background="@drawable/radio_alllevel_selector"
+                android:button="@null" />
+
+            <RadioButton
+                android:layout_width="@dimen/mar50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/radio_special_selector"
+                android:button="@null" />
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/radio_level1_selector"
+                android:button="@null" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="-21dp"
+                android:background="@drawable/radio_level2_selector"
+                android:button="@null" />
+
+            <RadioButton
+                android:layout_width="45dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="107dp"
+                android:layout_marginTop="-21dp"
+                android:background="@drawable/radio_level3_selector"
+                android:button="@null" />
+
+
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_keshi"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_rg_hljb"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:drawableLeft="@mipmap/ic_spot"
+            android:drawablePadding="@dimen/drawable_padding_5dp"
+            android:text="@string/keshi" />
+
+        <View
+            android:id="@+id/keshiV"
+            style="@style/view_commonHori"
+            android:layout_below="@id/menu_rg_hljb"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/tv_keshi"
+            android:background="@android:color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/tv_keshi"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <RadioGroup
+                android:id="@+id/home_rg_keshi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/menu_rb_1"
+                    style="@style/menuRadio"
+                    android:checked="true" />
+            </RadioGroup>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+    <!--</ScrollView>-->

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/colorGroup"
+    android:orientation="horizontal"
+    android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+    android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
+    tools:ignore="RtlSymmetry">
+
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/padding7dp"
+        android:layout_marginRight="@dimen/padding7dp"
+        android:src="@mipmap/icon_wenshu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/drawable_padding_5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@android:id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/drawable_padding_3dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="1"
+            android:textAlignment="viewStart"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#b0d8fa"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+
+</LinearLayout>

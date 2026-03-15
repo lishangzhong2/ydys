@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="700dp"
+    android:layout_height="480dp"
+    android:background="@drawable/card_bg"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="临时医嘱执行确认"
+        android:textColor="@color/textBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toEndOf="@+id/cb_cx"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_cx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="全选"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvsjxz"
+        android:layout_width="88dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="left"
+        android:text="时间选择:"
+        android:textColor="@color/textBlack"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_xgsj1"
+        app:layout_constraintTop_toBottomOf="@+id/sfxm_recycler"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <TextView
+        android:id="@+id/tv_xgsj1"
+        android:layout_width="230dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left|center"
+        android:text="2021-03-08 12:00:00"
+        android:textColor="@color/textBlack"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_cancle"
+        app:layout_constraintTop_toBottomOf="@+id/sfxm_recycler"
+        app:layout_constraintVertical_bias="0.384"
+        android:layout_marginRight="80dp" />
+
+    <Button
+        android:id="@+id/bt_confirm"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/audio_bar_blue"
+        android:text="确 认"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sfxm_recycler"
+        app:layout_constraintVertical_bias="0.619"
+        android:layout_marginRight="16dp" />
+
+    <Button
+        android:id="@+id/bt_cancle"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/audio_bar_orange"
+        android:text="取 消"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/sfxm_recycler"
+        android:layout_marginRight="44dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/sfxm_recycler"
+        android:layout_width="664dp"
+        android:layout_height="370dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="16dp" />
+
+</android.support.constraint.ConstraintLayout>

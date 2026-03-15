@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tableHeadHeight"
+    android:background="@color/itemBg"
+    android:orientation="horizontal">
+
+    <!--<View style="@style/view_commonVert" />-->
+    <View
+        android:layout_width="@dimen/drawable_padding_3dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp" />
+    <CheckBox
+        android:id="@+id/yizhu_header_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/item_tv_state"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:text="状态" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_startTime"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:text="开始时间" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_group"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        android:text="组" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_yizhu"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="150"
+        android:text="医嘱" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_docSig"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="40"
+        android:text="医师签名" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_nursig"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="40"
+        android:text="护士签名" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_endTime"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:text="停止时间" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_endDoc"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="40"
+        android:text="停止医师" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_nurCheck"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="40"
+        android:text="护士签名" />
+
+    <TextView
+        android:id="@+id/item_tv_nurCa"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:text="CA执行人"
+        android:visibility="gone"/>
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        android:id="@+id/item_tv_num"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35"
+        android:text="医嘱号" />
+
+    <!--<View style="@style/view_commonVert" />-->
+</LinearLayout>

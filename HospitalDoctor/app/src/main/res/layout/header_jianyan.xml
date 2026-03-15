@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tableHeadHeight"
+    android:background="@color/itemBg"
+    android:orientation="horizontal">
+
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="项目名称" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="结果" />
+
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="单位" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="上下限" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text="状态"
+        android:textColor="@color/colorItemText" />
+
+    <!--<View style="@style/view_commonVert" />-->
+
+   <!-- <TextView
+        android:id="@+id/jianyan_tv_time"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text="英文名称"
+        android:textColor="@color/colorItemText" />-->
+
+    <!--<View style="@style/view_commonVert" />-->
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="188dp"
+    android:layout_height="188dp"
+    android:background="@mipmap/bg_menu_tool">
+
+    <ImageView
+        android:id="@+id/tool_iv_scan"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@mipmap/ic_scan"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/tool_iv_note"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/tool_iv_scan"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="-5dp"
+        android:src="@mipmap/ic_note"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/tool_iv_nav"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/tool_iv_note"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@mipmap/ic_nav"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/tool_iv_signin"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/tool_iv_nav"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="-7dp"
+        android:src="@mipmap/ic_signin"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_above="@id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-7dp"
+        android:layout_marginRight="62dp"
+        android:src="@mipmap/ic_signin_dao" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_above="@id/iv_notedao"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:layout_marginRight="23dp"
+        android:src="@mipmap/ic_nav_dao" />
+
+    <ImageView
+        android:id="@+id/iv_notedao"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_above="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginBottom="-5dp"
+        android:src="@mipmap/ic_note_dao"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:layout_marginRight="62dp"
+        android:src="@mipmap/ic_scan_dao" />
+
+</RelativeLayout>

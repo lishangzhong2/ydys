@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/navMenuWidth"
+    android:layout_height="match_parent"
+    android:background="@color/navMenuBg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/qixiaoTV"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:drawableLeft="@mipmap/ic_spot"
+            android:drawablePadding="@dimen/drawable_padding_5dp"
+            android:text="@string/yzqx" />
+
+        <View
+            android:id="@+id/qixiaoV"
+            style="@style/view_commonHori"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/qixiaoTV"
+            android:background="@android:color/white" />
+
+        <RadioGroup
+            android:id="@+id/qixiaoGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/qixiaoTV"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/menu_rb_longyizhu"
+                style="@style/menuRadioYZ"
+                android:layout_marginRight="@dimen/mar10dp"
+                android:background="@drawable/long_selector"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/menu_rb_shortyizhu"
+                style="@style/menuRadioYZ"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/mar10dp"
+                android:background="@drawable/lishi_selector" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/fenleiTV"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/qixiaoGroup"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:drawableLeft="@mipmap/ic_spot"
+            android:drawablePadding="@dimen/drawable_padding_5dp"
+            android:text="@string/yizhutypes" />
+
+        <View
+            android:id="@+id/fenleiV"
+            style="@style/view_commonHori"
+            android:layout_below="@id/qixiaoGroup"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/fenleiTV"
+            android:background="@android:color/white" />
+
+        <RadioGroup
+            android:id="@+id/yizhu_rg_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fenleiTV"
+            android:orientation="vertical">
+
+            <RadioButton
+                style="@style/menuRadio"
+                android:text="@string/currentyizhu" />
+
+            <RadioButton
+                style="@style/menuRadio"
+                android:text="@string/todayyizhu" />
+
+            <RadioButton
+                style="@style/menuRadio"
+                android:text="@string/yesterdayyizhu" />
+
+            <RadioButton
+                style="@style/menuRadio"
+                android:text="@string/yizhuweekbefore" />
+
+            <RadioButton
+                style="@style/menuRadio"
+                android:text="@string/allyizhu" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/stateTV"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yizhu_rg_types"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:drawableLeft="@mipmap/ic_spot"
+            android:drawablePadding="@dimen/drawable_padding_5dp"
+            android:text="@string/yizhuState" />
+
+        <View
+            android:id="@+id/stateV"
+            style="@style/view_commonHori"
+            android:layout_below="@id/yizhu_rg_types"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/fenleiTV"
+            android:background="@android:color/white" />
+
+        <RadioGroup
+            android:id="@+id/yizhu_rg_states"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stateTV"
+            android:layout_marginBottom="@dimen/mar20dp"
+            android:layout_marginTop="@dimen/drawable_padding_5dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="@dimen/mar20dp"
+                android:background="@drawable/state_baocun"
+                android:button="@null" />
+
+            <RadioButton
+                android:layout_width="50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/state_tijiao"
+                android:button="@null" />
+
+            <RadioButton
+                android:layout_width="50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="@dimen/mar20dp"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/state_notong"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/yizhu_rb_ting"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/state_yiting"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/yizhu_rb_zhixing"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="@dimen/mar20dp"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/state_yizhi"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/yizhu_rb_zuofei"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/state_zuofei"
+                android:button="@null"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/stateClear"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/mar20dp"
+                android:layout_marginLeft="@dimen/mar20dp"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:button="@null"
+                android:visibility="invisible" />
+
+        </RadioGroup>
+    </RelativeLayout>
+    <!--</ScrollView>-->
+
+</RelativeLayout>

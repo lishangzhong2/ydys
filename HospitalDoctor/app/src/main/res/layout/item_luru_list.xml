@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemHeight"
+    android:background="@color/itemBg"
+    android:orientation="horizontal"
+    android:id="@+id/luru_ll"
+    >
+
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/luru_tv_startTime"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="39"
+        android:text="开始时间" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/luru_tv_yizhu"
+        style="@style/headerTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="133"
+        android:text="医嘱" />
+    <View style="@style/view_commonVert" />
+</LinearLayout>

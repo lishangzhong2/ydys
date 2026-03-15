@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">移动医生</string>
+
+    <!-- Strings related to login -->
+    <string name="error_invalid_email">无效的邮箱账号</string>
+    <string name="error_invalid_password">密码长度太短</string>
+    <string name="error_field_required">账户名不能为空</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="wenshu">文书</string>
+    <string name="tiwendan">体温单</string>
+    <string name="sure">确定</string>
+    <string name="myPatient">(%1$s)</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="inputNameOrNum">请输入姓名或住院号</string>
+    <string name="keshi">科室</string>
+    <string name="isMyPatient">全科</string>
+    <string name="isInHospital">在院</string>
+    <string name="hljb">护理级别</string>
+    <string name="lujing">路径</string>
+    <string name="yzqx">医嘱期效</string>
+    <string name="longyizhu">长期医嘱</string>
+    <string name="shortyizhu">临时医嘱</string>
+    <string name="yizhutypes">医嘱分类</string>
+    <string name="currentyizhu">当前医嘱</string>
+    <string name="todayyizhu">今日医嘱</string>
+    <string name="yesterdayyizhu">昨日医嘱</string>
+    <string name="yizhuweekbefore">最近一周的医嘱</string>
+    <string name="allyizhu">全部</string>
+    <string name="hzbw">患者备忘</string>
+    <string name="rytext">入院：</string>
+    <string name="zhenduanText">诊断：</string>
+    <string name="lastweek">上一周</string>
+    <string name="thisweek">本周</string>
+    <string name="nextWeek">下一周</string>
+    <string name="date">日期</string>
+    <string name="account">用户名</string>
+    <string name="password">密码</string>
+    <string name="logIn">登录</string>
+    <string name="msgDetails">消息详情</string>
+    <string name="topicIs">主题：</string>
+    <string name="contentIs">内容：</string>
+    <string name="pressToRecord">按住录音</string>
+    <string name="confirm">确定</string>
+    <string name="setIpText">Service地址修改（限第一次）</string>
+    <string name="httpAnd">http://</string>
+    <string name="ip">IP</string>
+    <string name="line">/</string>
+    <string name="address">地址</string>
+    <string name="dismiss">取消</string>
+    <string name="unreadMsg">未读消息</string>
+    <string name="readMSg">已读消息</string>
+    <string name="message">公告消息</string>
+    <string name="yixuanyaopin">已选药品</string>
+    <string name="attendance">考勤</string>
+    <string name="signin">我的考勤</string>
+    <string name="attendHistory">考勤历史</string>
+    <string name="yizhuState">医嘱状态</string>
+    <string name="inputNameBednum">请输入姓名或床位号</string>
+    <string name="updateApk">立即更新</string>
+    <string name="ignoreUpdate">暂不更新</string>
+    <string name="updateTitle">检测到新版本更新</string>
+    <string name="newFunctionsAre">新版本更新功能：</string>
+    <string name="loading">正在加载...</string>
+    <string name="xuetangdan">血糖监测表</string>
+</resources>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/attend_iv_gender"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@mipmap/ic_doctorpic" />
+
+    <TextView
+        android:id="@+id/atten_tv0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:layout_toRightOf="@id/attend_iv_gender"
+        android:text="医生姓名："
+        android:textColor="@color/grey999"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/attend_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:layout_toRightOf="@id/atten_tv0"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/atten_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atten_tv0"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:layout_toRightOf="@id/attend_iv_gender"
+        android:text="科室名称："
+        android:textColor="@color/grey999"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/attend_tv_keshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atten_tv0"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:layout_toRightOf="@id/atten_tv1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/attend_iv_daka"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/mar20dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:background="@mipmap/bg_daka"
+        android:gravity="center"
+        android:text="打卡"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/attend_tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="@dimen/mar30dp"
+        android:layout_toLeftOf="@id/attend_iv_daka"
+        android:text="签到班次："
+        android:textColor="#387ab4"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <View
+        android:id="@+id/attend_v0"
+        style="@style/view_commonHoriGrey"
+        android:layout_below="@id/attend_iv_gender"
+        android:layout_marginTop="@dimen/mar10dp" />
+
+    <ImageView
+        android:id="@+id/attend_iv_last"
+        android:layout_width="4.3dp"
+        android:layout_height="7.6dp"
+        android:layout_below="@id/attend_v0"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:layout_marginTop="24dp"
+        android:layout_toLeftOf="@id/attend_tv_date"
+        android:src="@mipmap/arrow_attend_left" />
+
+    <ImageView
+        android:id="@+id/attend_iv_next"
+        android:layout_width="4.3dp"
+        android:layout_height="7.6dp"
+        android:layout_below="@id/attend_v0"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@id/attend_tv_date"
+        android:src="@mipmap/arrow_attend_right" />
+
+    <TextView
+        android:id="@+id/attend_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attend_v0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/mar20dp"
+        android:text="哈哈哈"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/attend_tv_queqin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/attend_tv_date"
+        android:layout_marginRight="@dimen/mar30dp"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:text="缺勤"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_10sp" />
+
+    <ImageView
+        android:id="@+id/attend_iv_queqin"
+        android:layout_width="8.3dp"
+        android:layout_height="9.3dp"
+        android:layout_below="@id/attend_tv_date"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@id/attend_tv_queqin"
+        android:src="@mipmap/ic_cuocha" />
+
+    <TextView
+        android:id="@+id/attend_tv_qingjia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attend_tv_date"
+        android:layout_marginRight="@dimen/mar30dp"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:layout_toLeftOf="@id/attend_iv_queqin"
+        android:text="请假"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_10sp" />
+
+    <ImageView
+        android:id="@+id/attend_iv_qingjia"
+        android:layout_width="8.3dp"
+        android:layout_height="9.3dp"
+        android:layout_below="@id/attend_tv_date"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@id/attend_tv_qingjia"
+        android:src="@mipmap/ic_circle" />
+
+    <TextView
+        android:id="@+id/attend_tv_shangban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attend_tv_date"
+        android:layout_marginRight="@dimen/mar30dp"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:layout_toLeftOf="@id/attend_iv_qingjia"
+        android:text="上班"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_10sp" />
+
+    <ImageView
+        android:id="@+id/attend_iv_shangban"
+        android:layout_width="8.3dp"
+        android:layout_height="9.3dp"
+        android:layout_below="@id/attend_tv_date"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@id/attend_tv_shangban"
+        android:src="@mipmap/ic_duigou" />
+
+    <LinearLayout
+        android:id="@+id/header_attend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar30dp"
+        android:layout_below="@+id/attend_iv_shangban"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/size0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="日期"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:layout_width="@dimen/size0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="上午"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:layout_width="@dimen/size0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="下午"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:layout_width="@dimen/size0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="晚上"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/attend_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_attend"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/padding7dp" />
+</RelativeLayout>

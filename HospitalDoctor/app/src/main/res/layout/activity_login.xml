@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/login_bg"
+            android:layout_width="515dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:src="@mipmap/bg_log"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="350dp"
+            android:background="@mipmap/bg_logedit"
+            android:drawableLeft="@mipmap/ic_account2"
+            android:drawablePadding="@dimen/drawable_padding_5dp"
+            android:drawableStart="@mipmap/ic_account2"
+            android:hint="@string/account"
+            android:singleLine="true"
+            android:textSize="@dimen/textSize_12sp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:layout_marginStart="@dimen/marginCommon"
+            android:layout_marginTop="350dp"
+            android:layout_toEndOf="@id/email"
+            android:layout_toRightOf="@id/email"
+            android:background="@mipmap/bg_logedit"
+            android:drawableLeft="@mipmap/ic_password2"
+            android:drawablePadding="@dimen/drawable_padding_5dp"
+            android:drawableStart="@mipmap/ic_password2"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/textSize_12sp"
+            tools:ignore="TextFields" />
+
+        <Button
+            android:id="@+id/email_sign_in_button"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/mar30dp"
+            android:layout_marginStart="@dimen/mar30dp"
+            android:layout_marginTop="350dp"
+            android:layout_toEndOf="@id/password"
+            android:layout_toRightOf="@id/password"
+            android:background="#80c9ec"
+            android:singleLine="true"
+            android:text="@string/logIn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/mar30dp"
+            android:layout_marginStart="@dimen/mar30dp"
+            android:layout_marginTop="323dp"
+            android:layout_toEndOf="@id/password"
+            android:layout_toRightOf="@id/password"
+            android:visibility="gone" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_setIP"-->
+        <!--android:layout_width="25dp"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_marginLeft="110dp"-->
+        <!--android:layout_marginStart="110dp"-->
+        <!--android:layout_marginTop="350dp"-->
+        <!--android:layout_toEndOf="@id/password"-->
+        <!--android:layout_toRightOf="@id/password"-->
+        <!--android:src="@drawable/ic_setip"-->
+        <!--tools:ignore="ContentDescription" />-->
+    </RelativeLayout>
+
+</ScrollView>

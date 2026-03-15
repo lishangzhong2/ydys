@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tableHeadHeight"
+    android:paddingLeft="@dimen/mar10dp"
+    android:paddingRight="@dimen/mar10dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+         />
+
+    <TextView
+        android:id="@+id/item_tv_zbz"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="组" />
+
+    <TextView
+        android:id="@+id/item_tv_yzmc"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:text="医嘱名称" />
+
+    <TextView
+        android:id="@+id/item_tv_gg"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:text="规格" />
+
+    <TextView
+        android:id="@+id/item_tv_jl"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:text="剂量" />
+
+    <TextView
+        android:id="@+id/item_tv_dw"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:text="单位" />
+
+    <TextView
+        android:id="@+id/item_tv_yf"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:text="用法" />
+
+    <TextView
+        android:id="@+id/item_tv_pl"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:text="频率"
+        android:textColor="@color/colorItemText" />
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dialog_tv_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mar20dp"
+        android:layout_marginTop="@dimen/margin"
+        android:text="请输入旧密码："
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/dialog_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar20dp"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toRightOf="@id/dialog_tv_change"
+        android:inputType="textPassword"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_et_password"
+        android:layout_marginLeft="@dimen/mar20dp"
+        android:layout_marginTop="@dimen/margin"
+        android:text="再次输入新密码："
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/dialog_et_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_et_password"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar20dp"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toRightOf="@id/dialog_tv_change"
+        android:inputType="textPassword"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/dilog_change_commit"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/dialog_et_confirm"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:background="@drawable/password_selector" />
+</RelativeLayout>

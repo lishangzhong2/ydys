@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/yizhu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/mar10dp"
+    android:layout_marginRight="@dimen/mar10dp"
+    android:background="@drawable/card_bg">
+
+    <ImageView
+        android:id="@+id/yizhu_iv_new"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/ic_new"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/yizhu_iv_commit"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/yizhu_iv_new"
+        android:src="@mipmap/ic_commit"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/yizhu_iv_herbal"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/yizhu_iv_commit"
+        android:src="@mipmap/ic_herbal" />
+
+    <TextView
+        android:id="@+id/yizhu_iv_cado"
+        android:layout_width="55dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/yizhu_iv_herbal"
+        android:background="@drawable/audio_bar_orange"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="签字执行"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/yizhu_iv_tao"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/yizhu_iv_bind"
+        android:src="@mipmap/ic_yizhu_tao"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/yizhu_tv_title"
+        style="@style/textViewBlack13Real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:layout_marginTop="13dp"
+        android:text="长期医嘱" />
+
+
+    <ImageView
+        android:id="@+id/yizhu_iv_bind"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_alignBottom="@+id/yizhu_tv_title"
+        android:layout_alignTop="@+id/yizhu_iv_shanchu"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_toLeftOf="@+id/yizhu_iv_unbind"
+        android:layout_toStartOf="@+id/yizhu_iv_unbind"
+        android:src="@mipmap/ic_bind"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/yizhu_iv_unbind"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@+id/yizhu_iv_shanchu"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_toLeftOf="@+id/yizhu_iv_shanchu"
+        android:layout_toStartOf="@+id/yizhu_iv_shanchu"
+        android:src="@mipmap/ic_unbind"
+        android:visibility="visible" />
+
+    <!--刚开始就是隐藏的-->
+    <ImageView
+        android:id="@+id/yizhu_iv_chongzheng"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/reset_selector"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/yizhu_iv_shanchu"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="8dp"
+        android:background="@mipmap/ic_delete"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/tuli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yizhu_tv_title"
+        android:layout_marginBottom="@dimen/drawable_padding_2dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_2dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yizhu_tv_yaopin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="药品医嘱"
+            android:textColor="@color/yaopin"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/yizhu_tv_shoushu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:text="手术医嘱"
+            android:textColor="@color/shoushu"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/yizhu_tv_jiancha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:text="检查检验"
+            android:textColor="@color/jiancha"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/yizhu_tv_huli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:text="护理医嘱"
+            android:textColor="@color/huli"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/yizhu_tv_fuzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:text="辅助类医嘱"
+            android:textColor="@color/fuzhu"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/yizhu_tv_qita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:text="其他医嘱"
+            android:textColor="@color/qita"
+            android:textSize="@dimen/textSize_12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/yizhu_tv_zhiliao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:text="治疗医嘱"
+            android:textColor="@color/zhiliao"
+            android:textSize="@dimen/textSize_12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/yizhu_tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginCommon"
+            android:text="全部类型"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_12sp"
+            android:visibility="gone" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/yizhu_iv_reset"-->
+        <!--android:layout_width="18dp"-->
+        <!--android:layout_height="18dp"-->
+        <!--android:layout_marginLeft="@dimen/marginCommon"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/ic_reset" />-->
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        style="@style/view_commonHoriGrey"
+        android:layout_below="@id/tuli"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp" />
+
+    <include
+        android:id="@+id/header_yizhu"
+        layout="@layout/header_yizhu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tableHeadHeight"
+        android:layout_below="@id/view1"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp" />
+
+    <View
+        android:id="@+id/view2"
+        style="@style/view_commonHoriGrey"
+        android:layout_below="@id/header_yizhu"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/yizhu_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view2"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp">
+
+        <ListView
+            android:id="@+id/yizhu_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_empty" />
+
+</RelativeLayout>

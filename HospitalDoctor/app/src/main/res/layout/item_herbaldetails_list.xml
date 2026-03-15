@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View style="@style/view_commonHoriGrey" />
+
+    <TextView
+        android:id="@+id/item_herbal_drugName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_toRightOf="@+id/item_herbal_checkbox"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/item_herbal_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_herbal_drugName"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_toLeftOf="@id/item_herbal_pinyinNo"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/item_herbal_recipelNo"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:textColor="@color/grey666"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/item_herbal_pinyinNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/item_herbal_recipelNo"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:textColor="@color/grey666"
+        android:textSize="@dimen/textSize_12sp" />
+    <TextView
+        android:id="@+id/item_herbal_pc"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_herbal_info"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_toLeftOf="@id/item_herbal_pinyinNo"
+        android:textColor="@color/grey999"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/textSize_12sp" />
+    <ImageView
+        android:id="@+id/herbal_iv_pluslist"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="7dp"
+        android:src="@mipmap/plus"
+        android:visibility="visible" />
+    <View
+        style="@style/view_commonHoriGrey"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

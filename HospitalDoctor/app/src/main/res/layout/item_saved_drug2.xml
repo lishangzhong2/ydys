@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/drug2_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_toLeftOf="@id/drug2_iv_decrease"
+        android:text="名字"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/drug2_tv_shuliang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_toLeftOf="@id/drug2_iv_decrease"
+        android:gravity="right"
+        android:text="数量："
+        android:textColor="@color/grey666"
+        android:textSize="@dimen/textSize_12sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/drug2_iv_decrease"
+        android:layout_width="@dimen/margin"
+        android:layout_height="@dimen/margin"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_toLeftOf="@+id/drug2_tv_count"
+        android:src="@mipmap/ic_decrease_large" />
+
+    <TextView
+        android:id="@+id/drug2_tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/padding7dp"
+        android:layout_toLeftOf="@id/drug2_iv_add"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <ImageView
+        android:id="@+id/drug2_iv_add"
+        android:layout_width="@dimen/margin"
+        android:layout_height="@dimen/margin"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_toLeftOf="@id/drug2_tv_delete"
+        android:src="@mipmap/ic_add_large" />
+
+    <TextView
+        android:id="@+id/tv_glpl"
+        android:text="频率："
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:textColor="@color/result_view"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/drug2_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:id="@+id/luru_sp_zl_pl"
+        android:layout_alignTop="@id/tv_glpl"
+        android:layout_toRightOf="@id/tv_glpl"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_marginRight="100dp"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_10sp" />
+    <EditText
+        android:id="@+id/drug2_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_glpl"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_toLeftOf="@+id/drug2_tv_delete"
+        android:ellipsize="end"
+        android:hint="备注："
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:singleLine="true"
+        android:textSize="@dimen/textSize_10sp" />
+
+    <!--android:layout_marginTop="@dimen/mar10dp"
+    android:layout_marginBottom="@dimen/mar10dp"-->
+    <TextView
+        android:id="@+id/drug2_tv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/textRed"
+        android:gravity="center_vertical"
+        android:padding="@dimen/drawable_padding_3dp"
+        android:text="删除"
+        android:textSize="@dimen/textSize_12sp"
+        android:textColor="@android:color/white"
+         />
+
+</RelativeLayout>

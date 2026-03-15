@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/navMenuWidth"
+    android:layout_height="match_parent"
+    android:background="@color/navMenuBg"
+    android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--style="@style/textViewWhite11"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/mar30dp"-->
+        <!--android:layout_marginLeft="@dimen/marginCommon"-->
+        <!--android:layout_marginStart="@dimen/marginCommon"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="@string/hzbw" />-->
+
+    <!--<View-->
+        <!--style="@style/view_commonHori"-->
+        <!--android:layout_marginLeft="@dimen/mar30dp"-->
+        <!--android:layout_marginStart="@dimen/mar30dp"-->
+        <!--android:background="@android:color/white" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/mar30dp"-->
+        <!--android:layout_marginStart="@dimen/mar30dp"-->
+        <!--tools:ignore="UseCompoundDrawables">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/bw_tv_date"-->
+            <!--style="@style/textViewWhite12"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="@dimen/mar10dp"-->
+            <!--android:layout_weight="1" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="@dimen/mar10dp"-->
+            <!--android:layout_marginRight="@dimen/mar10dp"-->
+            <!--android:src="@drawable/ic_down" />-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cfmxtk"
+    android:layout_width="700dp"
+    android:layout_height="475dp"
+    android:background="@drawable/bg_card_shadow"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="432dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="药品名称："
+                android:textColor="@color/textBlack"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/herbal_add_ypmc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剂量："
+                android:textColor="@color/textBlack"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/herbal_zcyjl_decrease"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_luru_decrease"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/herbal_add_jl"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/drawable_padding_3dp"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/herbal_zcyjl_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/drawable_padding_5dp"
+                android:src="@mipmap/ic_luru_add" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar10"
+                android:text="单位："
+                android:textColor="@color/textBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/herbal_tv_jldw"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注："
+                android:textColor="@color/textBlack"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/herbal_add_bz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/herbal_ypmc_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/luru_searchArea"
+                android:layout_marginLeft="@dimen/padding7dp"
+                android:layout_marginRight="@dimen/padding7dp"
+                android:layout_marginTop="@dimen/drawable_padding_5dp"
+                android:layout_weight="1"
+                android:horizontalSpacing="@dimen/drawable_padding_5dp"
+                android:numColumns="2"
+                android:verticalSpacing="@dimen/drawable_padding_5dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/herbal_dialog_save"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="500dp"
+                android:layout_marginRight="@dimen/mar30dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_green_light"
+                android:text="新增明细"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

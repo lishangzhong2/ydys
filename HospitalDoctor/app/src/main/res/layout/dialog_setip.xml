@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="292dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/card_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/setIpText"
+        android:textColor="@color/textBlack" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginStart="@dimen/mar10dp"
+            android:text="@string/httpAnd"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <EditText
+            android:id="@+id/ip_et1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_weight="2"
+            android:hint="@string/ip"
+            android:singleLine="true"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:text="@string/line"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <EditText
+            android:id="@+id/ip_et2"
+           android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:layout_marginStart="@dimen/drawable_padding_5dp"
+            android:layout_weight="1"
+            android:hint="@string/address"
+            android:singleLine="true"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="/mdwebservice/mdservice.asmx"
+            android:layout_marginRight="@dimen/drawable_padding_5dp"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp"
+            android:layout_marginEnd="@dimen/drawable_padding_5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mar10dp"
+        android:gravity="right"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/ip_tv_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:text="@string/dismiss"
+            android:textColor="@color/grey999"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/ip_tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/marginCommon"
+            android:text="@string/confirm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSize_12sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/mar10dp"
+    android:layout_marginRight="@dimen/mar10dp"
+    android:background="@drawable/card_bg"
+    android:padding="@dimen/mar10dp">
+
+    <com.tphy.hospitaldoctor.widget.SmartScrollView
+        android:id="@+id/wenshu_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wenshu_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/textBlack"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/wenshu_tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:enabled="false"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/textBlack"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </com.tphy.hospitaldoctor.widget.SmartScrollView>
+    <com.tphy.hospitaldoctor.widget.ZoomImageView
+        android:id="@+id/iv_ws"
+        android:layout_margin="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv_before"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="50dp"
+        android:visibility="gone"
+        android:background="@mipmap/before_img"
+        android:layout_height="50dp" />
+    <ImageView
+        android:id="@+id/iv_next"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:background="@mipmap/next_img"
+        android:layout_height="50dp" />
+
+    <include
+        android:id="@+id/twd_layout"
+        layout="@layout/twd_layout"
+        android:visibility="gone" />
+    <include
+        android:id="@+id/xtjcb_layout"
+        layout="@layout/xtjcb_layout"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/wenshu_iv_backTop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/marginCommon"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:src="@mipmap/ic_edit_enable"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/wenshu_iv_update"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/wenshu_iv_backTop"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/marginCommon"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:src="@mipmap/ic_wenshu_update"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+布局文件命名：
+
+    activity的布局文件以activity开头，加下划线，后面加activity的名称，如：activity_splash.xml,activity_home.xml;
+    fragment的布局文件以frag开头，加下划线，后面加fragment的名称，如：frag_task.xml ,frag_patient_list.xml;
+    每个activity.java命名必须以activity结尾，同fragment,dialog,adapter,viewholder...，已注明身份，且尽量避免命名冗长
+命名采用小驼峰命名法，
+如方法名： private void updatePatientInfo()
+控件：如：tv_title, et_password  ,具体某个activity 中的控件可以以该activity的名称，或名称简写+控件类型+控件功能构成，如：home_btn_login;
+

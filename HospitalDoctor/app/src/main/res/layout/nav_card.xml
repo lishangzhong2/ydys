@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="208dp"
+    android:layout_height="104dp"
+    android:background="@drawable/nav_card_bg">
+
+    <ImageView
+        android:id="@+id/iv_level"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginStart="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/mar10dp" />
+
+    <TextView
+        android:id="@+id/tv_cwh"
+        style="@style/cardTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginStart="@dimen/mar10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/iv_photo"
+        android:layout_toRightOf="@id/iv_photo" />
+
+    <TextView
+        android:id="@+id/tv_hzxm"
+        style="@style/cardTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/tv_cwh"
+        android:layout_toRightOf="@id/tv_cwh"
+        tools:ignore="RelativeOverlap" />
+
+    <!--    <TextView
+            android:id="@+id/tv_ye"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_hzxm"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/drawable_padding_3dp"
+            android:layout_toRightOf="@id/iv_photo"
+            android:text="余额"
+            android:textColor="@color/textRed" />-->
+
+    <TextView
+        android:id="@+id/tv_zyh"
+        style="@style/cardTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_hznl"
+        android:layout_alignBottom="@+id/tv_hznl"
+        android:layout_alignLeft="@+id/tv_cwh"
+        android:layout_alignStart="@+id/tv_cwh" />
+
+    <TextView
+        android:id="@+id/tv_hznl"
+        style="@style/cardTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_hzxm"
+        android:layout_alignStart="@id/tv_hzxm"
+        android:layout_below="@id/tv_hzxm"
+        android:layout_marginTop="@dimen/drawable_padding_3dp" />
+
+    <ImageView
+        android:id="@+id/iv_gender"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hzxm"
+        android:layout_marginLeft="@dimen/drawable_padding_5dp"
+        android:layout_marginStart="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/tv_hznl"
+        android:layout_toRightOf="@id/tv_hznl" />
+
+    <TextView
+        android:id="@+id/tv_yllx"
+        style="@style/textViewBlack14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_zyh"
+        android:layout_marginEnd="@dimen/drawable_padding_2dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/drawable_padding_2dp"
+        android:layout_marginStart="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_3dp"
+        android:layout_toEndOf="@id/iv_photo"
+        android:layout_toLeftOf="@id/tv_gchs"
+        android:layout_toRightOf="@id/iv_photo"
+        android:layout_toStartOf="@id/tv_gchs"
+        android:ellipsize="middle"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tv_gchs"
+        style="@style/cardTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_zyh"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_3dp" />
+
+    <TextView
+        android:id="@+id/tv_ksmc"
+        style="@style/cardTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_photo"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/cardVerticalSpace" />
+
+    <TextView
+        android:id="@+id/tv0"
+        style="@style/textViewBlack14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_photo"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginStart="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/cardVerticalSpace"
+        android:text="@string/rytext"
+        android:textColor="#999"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/textViewBlack14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_photo"
+        android:layout_marginLeft="@dimen/drawable_padding_2dp"
+        android:layout_marginRight="@dimen/drawable_padding_2dp"
+        android:layout_marginTop="@dimen/cardVerticalSpace"
+        android:layout_toEndOf="@id/tv0"
+        android:layout_toLeftOf="@id/tv_ksmc"
+        android:layout_toRightOf="@id/tv0"
+        android:layout_toStartOf="@id/tv_ksmc"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/textViewBlack14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ksmc"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginStart="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_3dp"
+        android:text="@string/zhenduanText"
+        android:textColor="#999" />
+
+    <TextView
+        android:id="@+id/tv_ryzd"
+        style="@style/textViewBlack14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ksmc"
+        android:layout_marginEnd="@dimen/drawable_padding_2dp"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/drawable_padding_2dp"
+        android:layout_marginStart="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_3dp"
+        android:layout_toEndOf="@id/tv1"
+        android:layout_toLeftOf="@id/iv_zzys"
+        android:layout_toRightOf="@id/tv1"
+        android:layout_toStartOf="@id/iv_zzys"
+        android:ellipsize="middle"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tv_zzys"
+        style="@style/cardTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_ksmc"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/drawable_padding_3dp" />
+
+    <ImageView
+        android:id="@+id/iv_zzys"
+        android:layout_width="8dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/tv_ksmc"
+        android:layout_marginEnd="@dimen/drawable_padding_3dp"
+        android:layout_marginRight="@dimen/drawable_padding_3dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/tv_zzys"
+        android:layout_toStartOf="@id/tv_zzys"
+        android:src="@mipmap/iv_doctor" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/card_iv_last"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/drawable_padding_5dp"-->
+    <!--android:layout_marginStart="@dimen/drawable_padding_5dp"-->
+    <!--android:src="@mipmap/ic_card_left"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/card_iv_next"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginEnd="@dimen/drawable_padding_5dp"-->
+    <!--android:layout_marginRight="@dimen/drawable_padding_5dp"-->
+    <!--android:src="@mipmap/ic_card_right"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/card_iv_more"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="@dimen/drawable_padding_5dp"-->
+    <!--android:src="@drawable/ic_more"-->
+    <!--android:visibility="gone" />-->
+    <LinearLayout
+        android:id="@+id/scanLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/card_iv_scan"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/ic_card_scan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:text="点击扫描床头卡"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

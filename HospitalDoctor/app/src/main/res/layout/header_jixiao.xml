@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_baogao_ll"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tableHeadHeight"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/jianyan_tv_ZWMC"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="考核项目名称" />
+
+    <TextView
+        android:id="@+id/jianyan_tv_JG"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="实际值" />
+
+    <TextView
+        android:id="@+id/jianyan_tv_DW"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="标准值" />
+
+    <TextView
+        android:id="@+id/jianyan_tv_RANGE"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="指标标志" />
+
+    <TextView
+        android:id="@+id/jianyan_tv_ZT"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <View
+        style="@style/view_commonVert"
+        android:visibility="gone" />
+
+    <!--<TextView
+        android:id="@+id/jianyan_tv_YWMC"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />-->
+
+</LinearLayout>

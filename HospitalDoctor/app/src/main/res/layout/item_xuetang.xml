@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    tools:layout_editor_absoluteY="25dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/ll_root"
+    android:layout_height="39dp">
+    <TextView
+        android:id="@+id/tv_czsj"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="20"
+        android:text="时间" />
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/tv_hzxm"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="35"
+        android:text="患者姓名" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_2am"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="3am" />
+    <View style="@style/view_commonVert" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_3am"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="3am" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_zcq"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="早餐前" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_zch"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="早餐后2h" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_wcq"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="午餐前" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_wch"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="午餐后2h" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_wancq"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="晚餐前" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_wanch"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="晚餐后2h" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_sq"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="睡前" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_sjxt"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="随机血糖" />
+    <View style="@style/view_commonVert" />
+    <TextView
+        android:id="@+id/tv_xt"
+        style="@style/item_bed_fee_tv"
+        android:layout_weight="25"
+        android:text="血酮" />
+</LinearLayout>
+    <View
+        android:layout_below="@id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dividerGrey"/>
+
+</RelativeLayout>

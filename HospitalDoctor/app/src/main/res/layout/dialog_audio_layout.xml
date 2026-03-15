@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="292dp"
+    android:layout_height="150dp"
+    android:background="@drawable/card_bg">
+
+    <ImageView
+        android:id="@+id/audio_wave"
+        android:layout_width="89dp"
+        android:layout_height="51dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:src="@mipmap/ic_wave_blue" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/audio_time_bar"-->
+    <!--android:layout_width="143dp"-->
+    <!--android:layout_height="12dp"-->
+    <!--android:layout_below="@id/audio_wave"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="@dimen/mar12dp"-->
+    <!--android:background="@drawable/audio_bar_blue"-->
+    <!--android:paddingLeft="@dimen/drawable_padding_5dp"-->
+    <!--android:text="1h42'"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/textSize_10sp"-->
+    <!--android:visibility="invisible" />-->
+
+    <Chronometer
+        android:id="@+id/time_display"
+        android:layout_width="143dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/audio_wave"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/mar12dp"
+        android:background="@drawable/audio_bar_blue"
+        android:drawableEnd="@mipmap/ic_sound"
+        android:drawableRight="@mipmap/ic_sound"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/drawable_padding_5dp"
+        android:paddingStart="@dimen/drawable_padding_5dp"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        tools:ignore="RtlSymmetry,SmallSp" />
+
+    <ImageView
+        android:id="@+id/audio_iv_record"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_below="@id/time_display"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@drawable/audio_button_blue" />
+
+    <ImageView
+        android:id="@+id/audio_tv_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@drawable/ic_close_blue" />
+
+    <TextView
+        android:id="@+id/audio_tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/audio_iv_record"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/drawable_padding_2dp"
+        android:text="@string/pressToRecord"
+        android:textColor="#4b66cc"
+        android:textSize="@dimen/textSize_10sp" />
+
+    <TextView
+        android:id="@+id/audio_tv_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:text="@string/topicIs"
+        android:textColor="#999"
+        android:textSize="@dimen/textSize_12sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/audio_et_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_toEndOf="@id/audio_tv_topic"
+        android:layout_toRightOf="@id/audio_tv_topic"
+        android:lines="1"
+        android:textSize="@dimen/textSize_12sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/audio_view"
+        style="@style/view_commonHoriGrey"
+        android:layout_below="@id/time_display"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/audio_view"
+        android:layout_marginLeft="@dimen/mar10dp"
+        android:layout_marginStart="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@mipmap/ic_dismiss"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/audio_iv_confirm"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/audio_view"
+        android:layout_marginEnd="@dimen/mar10dp"
+        android:layout_marginRight="@dimen/mar10dp"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:src="@mipmap/ic_save"
+        android:visibility="gone" />
+</RelativeLayout>

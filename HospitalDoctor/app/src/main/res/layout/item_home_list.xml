@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="144dp"
+    android:layout_height="188dp">
+
+
+    <RelativeLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:background="@drawable/card_bg">
+
+        <ImageView
+            android:id="@+id/card_iv_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_card_selected" />
+
+        <ImageView
+            android:id="@+id/card_iv_level"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/card_iv_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/mar10dp" />
+
+        <TextView
+            android:id="@+id/card_tv_cwh"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/card_iv_photo"
+            android:text="12床" />
+
+        <TextView
+            android:id="@+id/card_tv_hzxm"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_tv_cwh"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/drawable_padding_3dp"
+            android:layout_toRightOf="@id/card_iv_photo"
+            android:text="患者姓名" />
+
+        <TextView
+            android:id="@+id/card_tv_ye"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_tv_hzxm"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/drawable_padding_3dp"
+            android:layout_toRightOf="@id/card_iv_photo"
+
+            android:text="余额"
+            android:textColor="@color/textRed" />
+
+        <TextView
+            android:id="@+id/card_tv_xx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_tv_yllx"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/card_tv_ye"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/bg_bednum"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="AB型"
+            android:textColor="#ffffff"
+            android:textSize="8sp" />
+        <TextView
+            android:id="@+id/card_tv_zyh"
+            android:layout_toRightOf="@id/card_tv_xx"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_tv_ye"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:text="住院号" />
+
+        <TextView
+            android:id="@+id/card_tv_hznl"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_tv_gchs"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/mar30dp"
+            android:text="年龄" />
+
+        <TextView
+            android:id="@+id/card_tv_yllx"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/card_tv_zyh"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/drawable_padding_2dp"
+            android:layout_marginStart="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/cardVerticalSpace"
+            android:layout_toLeftOf="@id/card_iv_gchs"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="医疗类型" />
+
+        <TextView
+            android:id="@+id/card_tv_gchs"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/card_tv_zyh"
+            android:layout_marginEnd="@dimen/mar30dp"
+            android:layout_marginRight="@dimen/mar30dp"
+            android:layout_marginTop="@dimen/cardVerticalSpace" />
+
+        <ImageView
+            android:id="@+id/card_iv_gchs"
+            android:layout_width="8dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/card_tv_zyh"
+            android:layout_marginRight="@dimen/drawable_padding_3dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/card_tv_gchs"
+            android:src="@mipmap/ic_nurse" />
+
+
+        <TextView
+            android:id="@+id/card_tv_ksmc"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/card_tv_yllx"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginStart="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/cardVerticalSpace"
+            android:layout_toLeftOf="@id/card_iv_zzys"
+            android:layout_toStartOf="@id/card_iv_zzys"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="肠胃科" />
+
+
+        <TextView
+            android:id="@+id/card_tv_zzys"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/card_tv_gchs"
+            android:layout_marginRight="@dimen/cardMarginParent"
+            android:layout_marginTop="@dimen/cardVerticalSpace"
+            android:text="主治医师" />
+
+        <ImageView
+            android:id="@+id/card_iv_zzys"
+            android:layout_width="8dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/card_tv_gchs"
+            android:layout_marginRight="@dimen/drawable_padding_3dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/card_tv_zzys"
+            android:src="@mipmap/iv_doctor" />
+
+        <TextView
+            android:id="@+id/card_tv0"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_tv_ksmc"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/cardVerticalSpace"
+            android:text="入院："
+            android:textColor="#999" />
+
+        <TextView
+            android:id="@+id/card_tv_time"
+            style="@style/textViewBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_tv_zzys"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/cardVerticalSpace"
+            android:layout_toRightOf="@id/card_tv0"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/card_tv1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignLeft="@+id/card_tv0"
+            android:layout_alignStart="@+id/card_tv0"
+            android:layout_alignTop="@+id/card_tv_ryzd"
+            android:src="@drawable/bed_gmyw" />
+
+        <com.tphy.hospitaldoctor.widget.AlwaysMarqueeTextView
+            android:id="@+id/card_tv_ryzd"
+            style="@style/textViewBlack14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_tv0"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/cardVerticalSpace"
+            android:layout_toRightOf="@id/card_tv1"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="入院诊断" />
+
+        <ImageView
+            android:id="@+id/card_iv_zhongzheng"
+            android:layout_width="17dp"
+            android:layout_height="@dimen/mar50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/card_iv_photo"
+            android:src="@mipmap/ic_zhongzheng" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

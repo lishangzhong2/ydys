@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_xijun_ll"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemHeight"
+    android:orientation="horizontal">
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_xjmc"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_kssmc"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_jg"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_mgd"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_ny"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_zj"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_mg"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorItemText" />
+
+    <View style="@style/view_commonVert" />
+
+    <TextView
+        android:id="@+id/item_tv_bbh"
+        style="@style/itemTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/view_commonVert" />
+
+
+</LinearLayout>

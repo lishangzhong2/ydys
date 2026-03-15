@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <TextView
+        android:id="@+id/drug_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:text="名字"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/drug_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:layout_toRightOf="@id/drug_tv_name"
+        android:gravity="right"
+        android:text="名字"
+        android:textColor="@color/grey666"
+        android:textSize="@dimen/textSize_10sp" />
+
+    <TextView
+        android:id="@+id/drug_tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drug_tv_name"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:gravity="right"
+        android:text="名字"
+        android:textColor="@color/grey666"
+        android:textSize="@dimen/textSize_10sp" />
+
+    <TextView
+        android:id="@+id/drug_tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/drug_tv_name"
+        android:layout_marginRight="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:gravity="right"
+        android:text="数量："
+        android:textColor="@color/grey666"
+        android:textSize="@dimen/textSize_10sp" />
+</RelativeLayout>

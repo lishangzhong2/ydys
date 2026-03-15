@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:cardCornerRadius="@dimen/drawable_padding_5dp"
+    app:cardElevation="@dimen/drawable_padding_2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_iv_drugPic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/padding7dp"
+            android:layout_marginTop="@dimen/padding7dp"
+            android:src="@mipmap/ic_drug"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_tv_drugName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginRight="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/padding7dp"
+            android:layout_toRightOf="@id/item_iv_drugPic"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:lines="2"
+            android:text="阿莫西林"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/item_tv_gg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_tv_drugName"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/drawable_padding_5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="250ml"
+            android:textColor="#666"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/item_tv_yf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_tv_gg"
+            android:layout_marginLeft="@dimen/drawable_padding_3dp"
+            android:layout_marginTop="@dimen/drawable_padding_5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#666"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_tv_kf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/item_tv_yf"
+            android:layout_marginLeft="@dimen/drawable_padding_5dp"
+            android:layout_marginTop="@dimen/padding7dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="yf：静脉注入  皮试类 皮试 "
+            android:textColor="#999"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/item_iv_ybmc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/drawable_padding_5dp"
+            android:layout_marginRight="@dimen/mar10dp" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="265dp"
+    android:layout_height="150dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/daka_typeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/containerHeight"
+        android:orientation="vertical"
+        >
+
+        <CheckBox
+            android:id="@+id/daka_cb_morning"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="上午"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <CheckBox
+            android:id="@+id/daka_cb_noon"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="下午"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <CheckBox
+            android:id="@+id/daka_cb_afternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="晚上"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/textSize_12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/daka_typeGroup">
+
+        <TextView
+            android:id="@+id/dakaTv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_daka"
+            android:gravity="center"
+            android:text="打卡"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+</RelativeLayout>

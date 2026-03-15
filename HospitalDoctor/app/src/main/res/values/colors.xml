@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3eb6f2</color>
+    <color name="colorBgChecked">#a4d1e7</color>
+    <color name="colorActivated">#ceefff</color>
+    <color name="colorGroup">#387ab4</color>
+    <color name="colorGroupGreen">#c1e5b6</color>
+    <color name="colorPrimaryDark">#015198</color>
+    <color name="colorPrimarySelected">#1669b2</color>
+    <color name="navMenuBg">#387ab4</color>
+    <color name="colorAccent">#62bbf4</color>
+    <color name="colorPressedBg">#bbdcf1</color>
+    <color name="colorYizhuBg">#eaeaea</color>
+    <color name="commonBg">#e6e6e6</color>
+    <color name="dividerGrey">#ccc</color>
+    <color name="colorYY">#4b66cc</color>
+    <color name="colorFT">#fd962e</color>
+    <color name="colorPacsText">#f2ac4e</color>
+    <color name="grey999">#999</color>
+    <color name="grey666">#666</color>
+    <color name="textgreen">#66a536</color>
+
+    <!--级别颜色-->
+
+    <!--床号颜色-->
+    <color name="textBlack">#333</color>
+    <color name="textRed">#ff4b4b</color>
+    <color name="textGreen">#3e57bd</color>
+    <color name="itemBg">@android:color/white</color>
+    <color name="colorItemText">@android:color/black</color>
+    <color name="listItemBg">#ededed</color>
+    <!--医嘱状态颜色-->
+    <color name="xijian">#00b7ee</color>//新增
+    <color name="baocun">#4bb2cc</color>//保存
+    <color name="tijiao">#2f47a5</color>//提交
+    <color name="tongguo">#80c269</color>//审核通过
+    <color name="yishengcheng">#b3d465</color>//已生成
+    <color name="yizhixing">#617b82</color>//已执行
+    <color name="weitongguo">#f8b551</color>//审核未通过
+    <color name="yitingzhi">#f19149</color>//已停止/已撤销
+    <color name="zuofei">#ec6941</color>//作废
+    <!--医嘱类型颜色-->
+    <color name="yaopin">#eb6100</color>
+    <color name="shoushu">#ec87c0</color>
+    <color name="jiancha">#ffbb3e</color>
+    <color name="huli">#4bb2cc</color>
+    <color name="fuzhu">#6d86e1</color>
+    <color name="qita">#fd962e</color>
+    <color name="zhiliao">#88ca74</color>
+
+    <color name="bgColorCardNav">#b1cae0</color>
+
+    <!---->
+    <color name="btn_bg">#e9e9e9</color>
+    <color name="noEdit">#aeaeae</color>
+
+    <!--图标的颜色-->
+
+    <color name="default_lineColor">#0099cc</color>
+    <color name="default_chartBackgroundColor">#ffffff</color>
+    <color name="default_chartFillColor">#800099cc</color>
+    <color name="default_indicatorColor">#0099cc</color>
+
+    <color name="default_barColor">#0099cc</color>
+    <color name="default_barBackgroundColor">#190099cc</color>
+    <color name="default_labelColor">#000000</color>
+    <color name="sc_transparent_background">#00111111</color>
+    <color name="a_menu_blue">#015198</color>
+
+
+    <!--qrCode-->
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#00FF00</color>
+    <!-- QRCode scanner color end -->
+
+    <color name="white">#ffffff</color>
+</resources>

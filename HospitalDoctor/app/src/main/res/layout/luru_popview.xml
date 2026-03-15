@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/luru_area"
+    android:layout_width="700dp"
+    android:layout_height="480dp"
+    android:background="@drawable/bg_card_shadow"
+    android:gravity="right"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="480dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/containerHeight"
+            android:layout_marginLeft="@dimen/padding7dp"
+            android:layout_marginTop="@dimen/padding7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginCommon"
+                android:text="@string/yixuanyaopin"
+                android:textColor="@android:color/black"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/luru_iv_save"
+                android:layout_width="54dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/mar10dp"
+                android:background="@mipmap/ic_save" />
+        </RelativeLayout>
+
+        <View
+            style="@style/view_commonHoriGrey"
+            android:layout_marginLeft="@dimen/padding7dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/luru_savedList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding7dp" />
+    </LinearLayout>
+
+    <View style="@style/view_commonVert" />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/drawable_padding_5dp"
+        android:layout_marginRight="@dimen/drawable_padding_5dp"
+        android:layout_marginTop="@dimen/drawable_padding_5dp"
+        android:layout_weight="5">
+
+        <RelativeLayout
+            android:layout_width="@dimen/size0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="17"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/luru_searchArea"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/containerHeight">
+
+                <EditText
+                    android:id="@+id/luru_et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/mar10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textSize_13sp" />
+
+                <ImageView
+                    android:id="@+id/luru_iv_clear"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_clear_blue"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/luruGrid"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/luru_searchArea"
+                android:layout_marginLeft="@dimen/padding7dp"
+                android:layout_marginRight="@dimen/padding7dp"
+                android:layout_marginTop="@dimen/drawable_padding_5dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="@dimen/drawable_padding_5dp" />
+
+            <ImageView
+                android:id="@+id/luru_iv_empty"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_empty" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/luru_rg_types"
+            android:layout_width="@dimen/size0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/bg_1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/luru_radio0"
+                android:layout_width="23dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding7dp"
+                android:background="@drawable/radio_drug"
+                android:button="@null"
+                android:gravity="center"
+                android:text="药品"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_13sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/luru_radio1"
+                android:layout_width="23dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/radio_drug"
+                android:button="@null"
+                android:gravity="center"
+                android:text="检查"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_13sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/luru_radio2"
+                android:layout_width="23dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/radio_drug"
+                android:button="@null"
+                android:gravity="center"
+                android:text="手术"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_13sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/luru_radio3"
+                android:layout_width="23dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/radio_drug"
+                android:button="@null"
+                android:gravity="center"
+                android:text="辅助"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_13sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/luru_radio4"
+                android:layout_width="23dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/radio_drug"
+                android:button="@null"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_13sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/luru_radio5"
+                android:layout_width="23dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/radio_drug"
+                android:button="@null"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_13sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/luru_radio6"
+                android:layout_width="23dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/mar10dp"
+                android:background="@drawable/radio_drug"
+                android:button="@null"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_13sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/block_relative"
+    android:layout_width="90dp"
+    android:layout_height="65dp"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/block_drugname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="药名"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/block_jldw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:text="计量单位"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <TextView
+        android:id="@+id/block_bz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="40dp"
+        android:text="备注"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/textSize_12sp" />
+
+    <ImageView
+        android:id="@+id/herbal_iv_plus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/plus"
+        android:visibility="gone" />
+
+    <View
+        style="@style/view_commonHoriGrey"
+        android:layout_marginTop="64dp" />
+
+    <View
+        style="@style/view_commonVert"
+        android:layout_marginLeft="89dp" />
+
+
+
+</RelativeLayout>
+

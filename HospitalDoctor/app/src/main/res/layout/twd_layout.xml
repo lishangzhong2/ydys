@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_lastweek"
+                style="@style/textViewWhite11"
+                android:layout_width="54dp"
+                android:layout_height="24dp"
+                android:background="@drawable/btn_week_green"
+                android:gravity="center"
+                android:text="@string/lastweek" />
+
+            <TextView
+                android:id="@+id/tv_thisweek"
+                style="@style/textViewWhite11"
+                android:layout_width="54dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="@dimen/mar10dp"
+                android:layout_marginStart="@dimen/mar10dp"
+                android:layout_toEndOf="@id/tv_lastweek"
+                android:layout_toRightOf="@id/tv_lastweek"
+                android:background="@drawable/btn_week_orange"
+                android:gravity="center"
+                android:text="@string/thisweek" />
+
+            <TextView
+                android:id="@+id/tv_nextweek"
+                style="@style/textViewWhite11"
+                android:layout_width="54dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="@dimen/mar10dp"
+                android:layout_marginStart="@dimen/mar10dp"
+                android:layout_toEndOf="@id/tv_thisweek"
+                android:layout_toRightOf="@id/tv_thisweek"
+                android:background="@drawable/btn_week_green"
+                android:gravity="center"
+                android:text="@string/nextWeek" />
+
+            <TextView
+                android:id="@+id/twd_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/date"
+                android:textColor="#3eb5f2"
+                android:textSize="@dimen/textSize_13sp" />
+        </RelativeLayout>
+
+        <View style="@style/view_commonHoriGrey" />
+
+        <com.tphy.hospitaldoctor.views.BodyTemperatureChart
+            android:id="@+id/tiwendanView"
+            android:layout_width="570dp"
+            android:layout_height="820dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginCommon" />
+    </LinearLayout>
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/hahah"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@mipmap/ic_back_top" />-->
+</ScrollView>

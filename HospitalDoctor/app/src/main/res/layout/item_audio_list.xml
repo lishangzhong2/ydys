@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.tphy.hospitaldoctor.views.SwipeDragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeDrag"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:visibility="visible"
+    app:need_offset="0.2">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:tag="Bottom2"-->
+    <!--tools:layout_gravity="start">-->
+    <!--<TextView-->
+    <!--android:id="@+id/colorBlock"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignTop="@+id/audio_item_time"-->
+    <!--android:background="@color/weitongguo"-->
+    <!--android:gravity="center"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/textSize_12sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/item_bw_ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/audio_item_state"
+            android:layout_width="5dp"
+            android:layout_height="34dp"
+            android:layout_alignBaseline="@+id/audio_item_topic"
+            android:layout_alignBottom="@+id/audio_item_topic"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/weitongguo"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/audio_item_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/audio_item_time"
+            android:layout_alignBottom="@+id/audio_item_time"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/audio_item_state"
+            android:layout_toRightOf="@+id/audio_item_state"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/audio_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="@dimen/padding7dp"
+            android:textColor="#666"
+            android:textSize="@dimen/textSize_12sp" />
+
+        <TextView
+            android:id="@+id/audio_item_bz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/audio_item_topic"
+            android:layout_alignStart="@+id/audio_item_topic"
+            android:layout_marginTop="27dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#999"
+            android:textSize="@dimen/textSize_12sp" />
+        <!--android:layout_alignBaseline="@+id/audio_item_type"-->
+        <!--android:layout_alignBottom="@+id/audio_item_type"-->
+        <!--android:layout_alignEnd="@+id/audio_item_type"-->
+        <!--android:layout_alignRight="@+id/audio_item_type"-->
+
+
+        <TextView
+            android:id="@+id/audio_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/audio_item_time"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="@dimen/drawable_padding_5dp"
+            android:textColor="#4bb2bb"
+            android:textSize="@dimen/textSize_12sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:tag="Bottom2"
+        tools:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/finish_bw"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/textgreen"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="完 成"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/swipetv"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/audio_item_time"
+            android:background="@color/textRed"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="删 除"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize_12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</com.tphy.hospitaldoctor.views.SwipeDragLayout>

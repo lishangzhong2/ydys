@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/navMenuWidth"
+    android:layout_height="match_parent"
+    android:background="@color/navMenuBg"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+        android:id="@+id/baogao_rg"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="@color/colorPrimarySelected"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingLeft="@dimen/mar10dp"
+        android:paddingRight="@dimen/mar10dp"
+        android:paddingTop="6dp">
+
+        <RadioButton
+            android:id="@+id/baogao_rb_jiancha"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_jiancha_selector"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/baogao_rb_jianyan"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_jianyan_selector"
+            android:button="@null" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/rl_jy_pxfs"
+        >
+        <TextView
+            android:id="@+id/tvjysjpx"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:text="时间排序：" />
+
+
+        <CheckBox
+            android:layout_toRightOf="@+id/tvjysjpx"
+            android:id="@+id/menu_cb_jy_sj"
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginTop="@dimen/mar10dp"
+            android:background="@drawable/switch_bg"
+            android:button="@null"
+            android:checked="true" />
+        <TextView
+            android:id="@+id/tvjymcpx"
+            android:layout_below="@+id/tvjysjpx"
+            style="@style/textViewWhite12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:layout_marginLeft="@dimen/mar10dp"
+            android:text="名称排序：" />
+
+
+        <CheckBox
+            android:layout_toRightOf="@+id/tvjymcpx"
+            android:layout_below="@+id/menu_cb_jy_sj"
+            android:id="@+id/menu_cb_jy_mc"
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="@dimen/mar10dp"
+            android:background="@drawable/switch_bg"
+            android:button="@null"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+
+    <ExpandableListView
+        android:id="@+id/baogao_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/jiancha_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

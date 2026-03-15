@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/mar12dp"
+        android:layout_marginTop="@dimen/mar12dp"
+        android:text="个人指标"
+        android:textColor="@android:color/black" />
+
+
+    <View style="@style/view_commonHoriGrey" />
+
+    <include layout="@layout/header_jixiao" />
+
+    <View style="@style/view_commonHoriGrey" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/jx_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

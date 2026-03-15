@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dialog_iv_twbw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginCommon"
+        android:layout_marginRight="@dimen/mar50dp"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:layout_toLeftOf="@id/baseView"
+        android:src="@mipmap/ic_twbw"
+
+        />
+
+    <View
+        android:id="@+id/baseView"
+        style="@style/view_commonVert"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/mar10dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/dialog_iv_yybw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/marginCommon"
+        android:layout_marginLeft="@dimen/mar50dp"
+        android:layout_toRightOf="@id/baseView"
+        android:src="@mipmap/ic_yybw"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

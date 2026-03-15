@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/navMenuWidth"
+    android:layout_height="match_parent"
+    android:background="@color/navMenuBg"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/textViewWhite11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginCommon"
+        android:layout_marginTop="@dimen/mar10dp"
+        android:text="@string/lujing"
+        android:layout_marginStart="@dimen/marginCommon" />
+</LinearLayout>
